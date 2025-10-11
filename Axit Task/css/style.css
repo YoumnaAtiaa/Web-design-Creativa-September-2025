@@ -1,0 +1,152 @@
+/* Reset style */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+:root{
+    --orange: #FF8B38;   /* buttons, highlights, accents */
+    --black: #000000;    /* Black background, text, header */
+    --white: #ffffff;    /* White background, text */
+    --light-off-white: #F5F5F5;
+    --light-grey: #E8E8E8;
+    --mid-grey: #333333;
+    --dark-grey: #86878B;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+hr{
+    border: 1px solid var(--white);
+    margin: 6% 0;
+    width: 18%;
+    color: inherit;
+}
+
+ul{
+    list-style: none;
+}
+
+h2{
+    font-size: 36px;
+    font-weight: bold;
+ }
+
+h2 span{
+    color: #de7b1e;
+    font-weight: lighter;
+ }
+
+/* global style */
+.container{
+    width: 70%;
+    margin: auto;
+}
+.padding-top-bottom{
+    padding: 6% 0%;
+}
+
+.btn-tranparent{
+    background-color: transparent;
+    color: white;
+    border-color: white;
+    border-style: solid;
+    padding: 1% 2%;
+    font-size: 20px;
+}
+.bg-black{
+    background-color: var(--black);
+}
+.d-inline-block{
+    display: inline-block;
+}
+
+
+
+/* custum style */
+nav{
+    color: white;
+    padding: 1.2% 0;
+}
+nav ul {
+    margin-left: 57%;
+    width: 35%;
+}
+nav li{
+    margin-left: 4%;
+}
+
+.bg-img1{
+    background-image: url(../images/Hero-section-img.png);
+    /* height: 500px; */
+    background-repeat: no-repeat;
+    background-color: aqua;
+    background-position-x: right;
+    background-position-y: center;
+    background-size: 100% 100%;
+}
+.bg-img2{
+    background-image: url(../images/Section9-img.png);
+    /* height: 500px; */
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: center;
+    background-size: 100% 100%;
+}
+.overlay{
+    background-color: rgba(0, 0, 0, 0.313);
+    height: 100%;
+    color: white;
+}
+.hero-details{
+    width: 40%;
+}
+
+.hero-details h4{
+    font-size: 20px;
+    margin: 3% 0%;
+}
+nav a{
+    /* color: white; */
+}
+.hero-details h2{
+    font-size: 60px;
+}
+.hero-details hr{
+    border: 1px solid var(--white);
+    margin: 6% 0;
+    width: 18%;
+}
+.hero-details p{
+    color: var(--dark-grey);
+}
+
+.bg-img1 .form-card{
+    margin-left: auto;
+}
+
+footer .padding-top-bottom{
+    padding: 2% 0%;
+}
+
+footer ul {
+    width: 30%;
+}
+footer li{
+    margin-right: 4%;
+}
+
+footer a{
+    color: var(--light-grey);
+    width: 20%;
+}
+
+footer p{
+    color: var(--dark-grey);
+}
+
