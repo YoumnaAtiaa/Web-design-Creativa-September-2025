@@ -1,0 +1,21 @@
+.road img{
+  width: 100%;
+  position: relative;
+}
+.car img{
+  position: absolute;
+  width: 20%;
+  top: 100px;
+  margin-left: 70% ;
+  animation-name: changeCar ;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+}
+@keyframes changeCar {
+  from{
+    transform: translateX(100px);
+  }
+  to{
+    transform: translatex(-1500px);
+}
+}
