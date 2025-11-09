@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doccure</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+   <!-- Custom CSS -->
+  <link rel="stylesheet" href="Css/style.css">
+  <link rel="stylesheet" href="Css/style-main.css">
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="0">
+   <div id="root">
+      <div>
+         <div class="main-wrapper">
+            <div>
+               <header class="header header header-custom header-fixed inner-header relative">
+                  <div class="container">
+                     <!-- Nav bar -->
+                     <nav class="navbar navbar-expand-lg header-nav">
+                        <div class="navbar-header"><a id="mobile_btn" href="dashboard.html" data-discover="true"><span class="bar-icon"><span></span><span></span><span></span></span></a><a class="navbar-brand logo" href="index.html" data-discover="true"><img class="img-fluid" alt="Logo" src="img/logo.svg"></a></div>
+                        <div class="main-menu-wrapper">
+                           <div class="menu-header">
+                              <a class="menu-logo" href="index.html" data-discover="true"><img class="img-fluid" alt="Logo" src="data:image/png;base64,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"></a>
+                              <a id="menu_close" class="menu-close" href="dashboard.html" data-discover="true">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                 </svg>
+                              </a>
+                           </div>
+                           <ul class="main-nav ">
+                              <li class="">
+                                 <a class="" href="index.html" data-discover="true">Home </a>
+                              </li>
+                              <li class="has-submenu active"><a class="" href="#" data-discover="true">Doctors <i class="fas fa-chevron-down"></i></a>
+                                 <ul class="submenu d-block">
+                                    <li class=""><a href="dashboard.html" data-discover="true">Doctors Dashboard</a></li>
+                                    <li class=""><a href="#" data-discover="true">Appointments</a></li>
+                                    <li class=""><a href="#" data-discover="true">Available Timing</a></li>
+                                    <li class=""><a href="#" data-discover="true">Patient Profile</a></li>
+                                    <li class=""><a href="#" data-discover="true">Chat</a></li>
+                                    <li class=""><a href="#" data-discover="true">Invoice</a></li>
+                                    <li class=""><a href="#" data-discover="true">Profile Settings</a></li>
+                                    <li class=""><a href="#" data-discover="true">Reviews</a></li>
+                                    <li class=""><a href="#" data-discover="true">Doctor Register</a></li>
+                                    <li class=""><a href="#" data-discover="true">Blog</a></li>
+                                 </ul>
+                              </li>
+                              <li class="has-submenu "><a class="" href="#" data-discover="true">Patients <i class="fas fa-chevron-down"></i></a>
+                                 <ul class="submenu d-block">
+                                    <li class=""><a href="#" data-discover="true">Patient Dashboard</a></li>
+                                    <li class=""><a href="#" data-discover="true">Doctors</a></li>
+                                    <li class=""><a href="#" data-discover="true">Search Doctor</a></li>
+                                    <li class=""><a href="#" data-discover="true">Search Profile</a></li>
+                                    <li class=""><a href="#" data-discover="true">Booking</a></li>
+                                    <li class=""><a href="#" data-discover="true">Checkout</a></li>
+                                    <li class=""><a href="#" data-discover="true">Booking Success</a></li>
+                                    <li class=""><a href="#" data-discover="true">Chat</a></li>
+                                    <li class=""><a href="#" data-discover="true">Profile Settings</a></li>
+                                    <li class=""><a href="#" data-discover="true">Change Password</a></li>
+                                 </ul>
+                              </li>
+                              <li class="has-submenu "><a class="" href="#" data-discover="true">Pharmacy <i class="fas fa-chevron-down"></i></a>
+                                 <ul class="submenu d-block">
+                                    <li class=""><a href="#" data-discover="true">Pharmacy</a></li>
+                                    <li class=""><a href="#" data-discover="true">Pharmacy Details</a></li>
+                                    <li class=""><a href="#" data-discover="true">Pharmacy Search</a></li>
+                                    <li class=""><a href="#" data-discover="true">Product</a></li>
+                                    <li class=""><a href="#" data-discover="true">Product Description</a></li>
+                                    <li class=""><a href="#" data-discover="true">Cart</a></li>
+                                    <li class=""><a href="#" data-discover="true">Product Checkout</a></li>
+                                    <li class=""><a href="#" data-discover="true">Product Success</a></li>
+                                    <li class=""><a href="#" data-discover="true">Product Register</a></li>
+                                 </ul>
+                              </li>
+                              <li class="has-submenu ">
+                                 <a class="subdrop" href="#" data-discover="true">Pages <i class="fas fa-chevron-down"></i></a>
+                                 <ul class="submenu d-block">
+                                    <li class=""><a href="#" data-discover="true">About Us</a></li>
+                                    <li class=""><a href="#" data-discover="true">Contact Us</a></li>
+                                    <li class="has-submenu"><a href="#" data-discover="true">Other Pages </a></li>
+                                    <li class="has-submenu"><a href="#" data-discover="true">Authentication </a></li>
+                                    <li class="has-submenu"><a href="#" data-discover="true">Error </a></li>
+                                    <li class=""><a href="#" data-discover="true">Hospitals</a></li>
+                                    <li class=""><a href="#" data-discover="true">Speciality</a></li>
+                                    <li class=""><a href="#" data-discover="true">Clinic</a></li>
+                                    <li class="has-submenu "><a href="#" data-discover="true">Call </a></li>
+                                    <li class="has-submenu "><a href="#" data-discover="true">Invoices </a></li>
+                                 </ul>
+                              </li>
+                              <li class="has-submenu"><a class="" href="#" data-discover="true">Blog <i class="fas fa-chevron-down"></i></a>
+                                 <ul class="submenu d-block">
+                                    <li class=""><a href="#" data-discover="true">Blog List</a></li>
+                                    <li class=""><a href="#" data-discover="true">Blog Grid</a></li>
+                                    <li class=""><a href="#" data-discover="true">Blog Details</a></li>
+                                 </ul>
+                              </li>
+                              <li class="has-submenu"><a class="" href="#" data-discover="true">Admin<i class="fas fa-chevron-down"></i></a>
+                                 <ul class="submenu d-block">
+                                    <li class=""><a href="#" data-discover="true">Admin</a></li>
+                                    <li class=""><a href="#" data-discover="true">Pharmacy Admin</a></li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </div>
+                        <ul class="nav header-navbar-rht">
+                           <li class="searchbar">
+                              <a href="#" data-discover="true">
+                                 <i class="fa-solid fa-magnifying-glass"></i>
+                              </a>
+                              <div class="togglesearch d-none">
+                                 <form>
+                                    <div class="input-group"><input class="form-control" type="text"><button type="submit" class="btn">Search</button></div>
+                                 </form>
+                              </div>
+                           </li>
+                           <li class="header-theme noti-nav"><a id="dark-mode-toggle" class="theme-toggle activate " href="dashboard.html" data-discover="true"><i class="fa-solid fa-sun"></i></a></li>
+                           <li class="nav-item dropdown noti-nav me-3 pe-0">
+                              <a class="dropdown-toggle active-dot active-dot-danger nav-link p-0" data-bs-toggle="dropdown" href="dashboard.html" data-discover="true"><i class="fa-solid fa-bell"></i></a>
+                              <div class="dropdown-menu notifications dropdown-menu-end ">
+                                 <div class="topnav-dropdown-header"><span class="notification-title">Notifications</span></div>
+                                 <div class="noti-content">
+                                    <ul class="notification-list">
+                                       <li class="notification-message">
+                                          <a href="#" data-discover="true">
+                                             <div class="notify-block d-flex">
+                                                <span class="avatar"><img class="avatar-img" alt="Ruby perin" src="img/Dashboard/client-01.jpg"></span>
+                                                <div class="media-body">
+                                                   <h6>Travis Tremble <span class="notification-time">18.30 PM</span></h6>
+                                                   <p class="noti-details">Sent a amount of $210 for his Appointment <span class="noti-title">Dr.Ruby perin </span></p>
+                                                </div>
+                                             </div>
+                                          </a>
+                                       </li>
+                                       <li class="notification-message">
+                                          <a href="#" data-discover="true">
+                                             <div class="notify-block d-flex">
+                                                <span class="avatar"><img class="avatar-img" alt="Hendry Watt" src="img/Dashboard/client-02.jpg"></span>
+                                                <div class="media-body">
+                                                   <h6>Travis Tremble <span class="notification-time">12 Min Ago</span></h6>
+                                                   <p class="noti-details"> has booked her appointment to <span class="noti-title">Dr. Hendry Watt</span></p>
+                                                </div>
+                                             </div>
+                                          </a>
+                                       </li>
+                                       <li class="notification-message">
+                                          <a href="#" data-discover="true">
+                                             <div class="notify-block d-flex">
+                                                <div class="avatar"><img class="avatar-img" alt="Maria Dyen" src="img/Dashboard/client-03.jpg"></div>
+                                                <div class="media-body">
+                                                   <h6>Travis Tremble <span class="notification-time">6 Min Ago</span></h6>
+                                                   <p class="noti-details"> Sent a amount $210 for his Appointment <span class="noti-title">Dr.Maria Dyen</span></p>
+                                                </div>
+                                             </div>
+                                          </a>
+                                       </li>
+                                       <li class="notification-message">
+                                          <a href="#" data-discover="true">
+                                             <div class="notify-block d-flex">
+                                                <div class="avatar avatar-sm"><img class="avatar-img" alt="client-image" src="img/Dashboard/client-04.jpg"></div>
+                                                <div class="media-body">
+                                                   <h6>Travis Tremble <span class="notification-time">8.30 AM</span></h6>
+                                                   <p class="noti-details"> Send a message to his doctor</p>
+                                                </div>
+                                             </div>
+                                          </a>
+                                       </li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="nav-item noti-nav me-3 pe-0"><a class="dropdown-toggle nav-link active-dot active-dot-success p-0" href="#" data-discover="true"><i class="fa-solid fa-message"></i></a></li>
+                           <li class="nav-item dropdown noti-nav view-cart-header me-3 pe-0">
+                              <a class="dropdown-toggle nav-link active-dot active-dot-purple p-0 position-relative" data-bs-toggle="dropdown" href="dashboard.html" data-discover="true"><i class="fa-solid fa-cart-shopping"></i></a>
+                              <div class="dropdown-menu notifications dropdown-menu-end">
+                                 <div class="shopping-cart">
+                                    <ul class="shopping-cart-items list-unstyled">
+                                       <li class="clearfix">
+                                          <div class="close-icon"><i class="fa-solid fa-circle-xmark"></i></div>
+                                          <a href="" data-discover="true"><img class="avatar-img rounded" alt="User Image" src="img/product.jpg"></a><a class="item-name" href="#" data-discover="true">Benzaxapine Croplex</a><span class="item-price">$849.99</span><span class="item-quantity">Quantity: 01</span>
+                                       </li>
+                                       <li class="clearfix">
+                                          <div class="close-icon"><i class="fa-solid fa-circle-xmark"></i></div>
+                                          <a href="#" data-discover="true"><img class="avatar-img rounded" alt="User Image" src="img/product1.jpg"></a><a class="item-name" href="#" data-discover="true">Ombinazol Bonibamol</a><span class="item-price">$1,249.99</span><span class="item-quantity">Quantity: 01</span>
+                                       </li>
+                                       <li class="clearfix">
+                                          <div class="close-icon"><i class="fa-solid fa-circle-xmark"></i></div>
+                                          <a href="#" data-discover="true"><img class="avatar-img rounded" alt="User Image" src="img/product2.jpg"></a><a class="item-name" href="#" data-discover="true">Dantotate Dantodazole</a><span class="item-price">$129.99</span><span class="item-quantity">Quantity: 01</span>
+                                       </li>
+                                    </ul>
+                                    <div class="booking-summary pt-3">
+                                       <div class="booking-item-wrap">
+                                          <ul class="booking-date">
+                                             <li>Subtotal <span>$5,877.00</span></li>
+                                             <li>Shipping <span>$25.00</span></li>
+                                             <li>Tax <span>$0.00</span></li>
+                                             <li>Total <span>$5.2555</span></li>
+                                          </ul>
+                                          <div class="booking-total">
+                                             <ul class="booking-total-list text-align">
+                                                <li>
+                                                   <div class="clinic-booking pt-3"><a class="apt-btn" href="/react/template/Pharmacy/cart" data-discover="true">View Cart</a></div>
+                                                </li>
+                                                <li>
+                                                   <div class="clinic-booking pt-3"><a class="apt-btn" href="/react/template/Pharmacy/product-checkout" data-discover="true">Checkout</a></div>
+                                                </li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="nav-item dropdown has-arrow logged-item">
+                              <a class="nav-link ps-0" data-bs-toggle="dropdown" aria-expanded="false" href="dashboard.html" data-discover="true"><span class="user-img"><img class="rounded-circle" alt="Darren Elder" width="31" src="img/dashboard/doctor-profile-img.jpg"></span></a>
+                              <div class="dropdown-menu dropdown-menu-end">
+                                 <div class="user-header">
+                                    <div class="avatar avatar-sm"><img class="avatar-img rounded-circle" alt="User Image" src="img/doctor-profile-img.jpg"></div>
+                                    <div class="user-text">
+                                       <h6>Dr Edalin Hendry</h6>
+                                       <p class="text-muted mb-0">Doctor</p>
+                                    </div>
+                                 </div>
+                                 <a class="dropdown-item" href="dashboard.html" data-discover="true">Dashboard</a><a class="dropdown-item" href="profile-settings.html" data-discover="true">Profile Settings</a><a class="dropdown-item" href="#" data-discover="true">Logout</a>
+                              </div>
+                           </li>
+                        </ul>
+                     </nav>
+                  </div>
+               </header>
+               <!-- banner -->
+               <div class="breadcrumb-bar">
+                  <div class="container">
+                     <div class="row align-items-center inner-banner">
+                        <div class="col-md-12 col-12 text-center">
+                           <nav aria-label="breadcrumb" class="page-breadcrumb">
+                              <ol class="breadcrumb">
+                                 <li class="breadcrumb-item"><a href="index.html" data-discover="true"><i class="fa-solid fa-house"></i></a></li>
+                                 <li class="breadcrumb-item" aria-current="page">Doctor</li>
+                                 <li class="breadcrumb-item active">Doctor Profile</li>
+                              </ol>
+                              <h2 class="breadcrumb-title">Doctor Profile</h2>
+                           </nav>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="breadcrumb-bg"><img class="breadcrumb-bg-01" alt="img" src="img/breadcrumb-bg-01.png"><img class="breadcrumb-bg-02" alt="img" src="img/breadcrumb-bg-02.png"><img class="breadcrumb-bg-03" alt="img" src="img/breadcrumb-icon.png"><img class="breadcrumb-bg-04" alt="img" src="img/breadcrumb-icon.png"></div>
+               </div>
+               <div class="content">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-lg-4 col-xl-3 theiaStickySidebar">
+                           <div class="stickybar">
+                              <div class="profile-sidebar doctor-sidebar profile-sidebar-new">
+                                 <div class="widget-profile pro-widget-content">
+                                    <div class="profile-info-widget">
+                                       <a class="booking-doc-img" href="doctor-profile.html" data-discover="true"><img alt="User Image" src="img/dashboard/doctor-thumb-02-Cbbh6L4C.jpg"></a>
+                                       <div class="profile-det-info">
+                                          <h3><a href="doctor-profile.html" data-discover="true">Dr Edalin Hendry</a></h3>
+                                          <div class="patient-details">
+                                             <h5 class="mb-0">BDS, MDS - Oral &amp; Maxillofacial Surgery</h5>
+                                          </div>
+                                          <span class="badge doctor-role-badge"><i class="fa-solid fa-circle"></i>Dentist</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="doctor-available-head">
+                                    <div class="">
+                                       <label class="form-label">Availability <span class="text-danger">*</span></label>
+                                       <div class="select css-b62m3t-container">
+                                          <span id="react-select-2-live-region" class="css-7pg0cj-a11yText"></span><span aria-live="polite" aria-atomic="false" aria-relevant="additions text" role="log" class="css-7pg0cj-a11yText"></span>
+                                          <div class="css-13cymwt-control">
+                                             <div class="css-hlgwow">
+                                                <div class="css-1dimb5e-singleValue">I am Available Now</div>
+                                                <div class="css-19bb58m" data-value=""><input class="" autocapitalize="none" autocomplete="off" autocorrect="off" id="react-select-2-input" spellcheck="false" tabindex="0" aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" role="combobox" aria-activedescendant="" type="text" value="" style="color: inherit; background: 0px center; opacity: 1; width: 100%; grid-area: 1 / 2; font: inherit; min-width: 2px; border: 0px; margin: 0px; outline: 0px; padding: 0px;"></div>
+                                             </div>
+                                             <div class="css-1wy0on6">
+                                                <span class="css-1u9des2-indicatorSeparator"></span>
+                                                <div class="css-1xc3v61-indicatorContainer" aria-hidden="true">
+                                                   <svg height="20" width="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false" class="css-8mmkcg">
+                                                      <path d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"></path>
+                                                   </svg>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="dashboard-widget">
+                                    <nav class="dashboard-menu">
+                                       <ul>
+                                          <li class=""><a href="#" data-discover="true"><i class="fa-solid fa-grip"></i><span>Dashboard</span></a></li>
+                                          <li class=""><a href="#" data-discover="true"><i class="fa-solid fa-clipboard"></i><span>Requests</span><small class="unread-msg">2</small></a></li>
+                                          <li class=""><a href="#" data-discover="true"><i class="fa-solid fa-calendar"></i><span>Appointments</span></a></li>
+                                          <li class=""><a href="#" data-discover="true"><i class="fa-solid fa-calendar-day"></i><span>Available Timings</span></a></li>
+                                          <li class=""><a href="#" data-discover="true"><i class="fa-solid fa-user-injured me-2"></i><span>My Patients</span></a></li>
+                                          <li class=""><a href="#" data-discover="true"><i class="fa-solid fa-clock"></i><span>Specialties &amp; Services</span></a></li>
+                                          <li class=""><a href="#" data-discover="true"><i class="fa-solid fa-star"></i><span>Reviews</span></a></li>
+                                          <li class=""><a href="#" data-discover="true"><i class="fa-solid fa-user"></i><span>Accounts</span></a></li>
+                                          <li class=""><a href="#" data-discover="true"><i class="fa-solid fa-file-lines"></i><span>Invoices</span></a></li>
+                                          <li class=""><a href="#" data-discover="true"><i class="fa-solid fa-money-bill-1 me-2"></i><span>Payout Settings</span></a></li>
+                                          <li><a href="#" data-discover="true"><i class="fa-solid fa-message"></i><span>Message</span><small class="unread-msg">7</small></a></li>
+                                          <li class="active"><a href="profile-settings.html" data-discover="true"><i class="fa-solid fa-gear"></i><span>Profile Settings</span></a></li>
+                                          <li class=""><a href="#" data-discover="true"><i class="fa-solid fa-shield-halved"></i><span>Social Media</span></a></li>
+                                          <li class=""><a href="#" data-discover="true"><i class="fa-solid fa-key"></i><span>Change Password</span></a></li>
+                                          <li class=""><a href="#" data-discover="true"><i class="fa-solid fa-arrow-right-from-bracket"></i><span>Logout</span></a></li>
+                                       </ul>
+                                    </nav>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- Main body -->
+                <div class="col-lg-8 col-xl-9">
+   <div class="dashboard-header">
+      <h3>Profile Settings</h3>
+   </div>
+   <div>
+      <div class="setting-tab">
+         <div class="appointment-tabs">
+            <ul class="nav">
+               <li class="nav-item"><a class="nav-link " href="profile-settings.html" data-discover="true">Basic Details</a></li>
+               <li><a class="nav-link active" href="education.html" data-discover="true">Education</a></li>
+            </ul>
+         </div>
+      </div>
+   </div>
+   <div class="dashboard-header border-0 mb-0">
+      <h3>Education</h3>
+      <ul>
+         <li><a class="btn btn-primary prime-btn add-educations" href="education.html" data-discover="true">Add New Education</a></li>
+      </ul>
+   </div>
+   <form>
+      <div class="accordions education-infos" id="list-accord">
+         <div class="user-accordion-item">
+            <a class="accordion-wrap" data-bs-toggle="collapse" data-bs-target="#education5" href="education.html" data-discover="true">Education<span>Delete</span></a>
+            <div class="accordion-collapse collapse show" id="education5" data-bs-parent="#list-accord">
+               <div class="content-collapse">
+                  <div class="add-service-info">
+                     <div class="add-info">
+                        <div class="row align-items-center">
+                           <div class="col-md-12">
+                              <div class="form-wrap mb-2">
+                                 <div class="change-avatar img-upload">
+                                    <div class="profile-img"><i class="fa-solid fa-file-image"></i></div>
+                                    <div class="upload-img">
+                                       <h5>Logo</h5>
+                                       <div class="imgs-load d-flex align-items-center">
+                                          <div class="change-photo">Upload New<input class="upload" type="file"></div>
+                                          <a class="upload-remove" href="education.html" data-discover="true">Remove</a>
+                                       </div>
+                                       <p class="form-text">Your Image should Below 4 MB, Accepted format Jpg,Png,Svg</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-6">
+                              <div class="form-wrap"><label class="col-form-label">Name of the institution</label><input class="form-control" type="text"></div>
+                           </div>
+                           <div class="col-md-6">
+                              <div class="form-wrap"><label class="col-form-label">Course</label><input class="form-control" type="text"></div>
+                           </div>
+                           <div class="col-lg-4 col-md-6">
+                              <div class="form-wrap">
+                                 <label class="col-form-label">Start Date <span class="text-danger">*</span></label>
+                                 <div class="form-icon">
+                                    <div class="react-datepicker-wrapper">
+                                       <div class="react-datepicker__input-container"><input class="form-control datetimepicker" type="text" value="08-11-2025"></div>
+                                    </div>
+                                    <span class="icon"><i class="fa-regular fa-calendar-days"></i></span>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-lg-4 col-md-6">
+                              <div class="form-wrap">
+                                 <label class="col-form-label">End Date <span class="text-danger">*</span></label>
+                                 <div class="form-icon">
+                                    <div class="react-datepicker-wrapper">
+                                       <div class="react-datepicker__input-container"><input class="form-control datetimepicker" type="text" value="08-11-2025"></div>
+                                    </div>
+                                    <span class="icon"><i class="fa-regular fa-calendar-days"></i></span>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-lg-4 col-md-6">
+                              <div class="form-wrap"><label class="col-form-label">No of Years <span class="text-danger">*</span></label><input class="form-control" type="text"></div>
+                           </div>
+                           <div class="col-lg-12">
+                              <div class="form-wrap"><label class="col-form-label">Description <span class="text-danger">*</span></label><textarea class="form-control" rows="3"></textarea></div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="text-end"><a class="reset more-item" href="education.html" data-discover="true">Reset</a></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="user-accordion-item">
+            <a class="collapsed accordion-wrap" data-bs-toggle="collapse" data-bs-target="#education2" href="education.html" data-discover="true">Cambridge (MBBS)<span>Delete</span></a>
+            <div class="accordion-collapse collapse" id="education2" data-bs-parent="#list-accord">
+               <div class="content-collapse">
+                  <div class="add-service-info">
+                     <div class="add-info">
+                        <div class="row align-items-center">
+                           <div class="col-md-12">
+                              <div class="form-wrap mb-2">
+                                 <div class="change-avatar img-upload">
+                                    <div class="profile-img"><i class="fa-solid fa-file-image"></i></div>
+                                    <div class="upload-img">
+                                       <h5>Logo</h5>
+                                       <div class="imgs-load d-flex align-items-center">
+                                          <div class="change-photo">Upload New<input class="upload" type="file"></div>
+                                          <a class="upload-remove" href="education.html" data-discover="true">Remove</a>
+                                       </div>
+                                       <p class="form-text">Your Image should Below 4 MB, Accepted format jpg,png,svg</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-6">
+                              <div class="form-wrap"><label class="col-form-label">Name of the institution</label><input class="form-control" type="text" value="Cambridge"></div>
+                           </div>
+                           <div class="col-md-6">
+                              <div class="form-wrap"><label class="col-form-label">Course</label><input class="form-control" type="text" value="MBBS"></div>
+                           </div>
+                           <div class="col-lg-4 col-md-6">
+                              <div class="form-wrap">
+                                 <label class="col-form-label">Start Date <span class="text-danger">*</span></label>
+                                 <div class="form-icon">
+                                    <div class="react-datepicker-wrapper">
+                                       <div class="react-datepicker__input-container"><input class="form-control datetimepicker" type="text" value="08-11-2025"></div>
+                                    </div>
+                                    <span class="icon"><i class="fa-regular fa-calendar-days"></i></span>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-lg-4 col-md-6">
+                              <div class="form-wrap">
+                                 <label class="col-form-label">End Date <span class="text-danger">*</span></label>
+                                 <div class="form-icon">
+                                    <div class="react-datepicker-wrapper">
+                                       <div class="react-datepicker__input-container"><input class="form-control datetimepicker" type="text" value="08-11-2025"></div>
+                                    </div>
+                                    <span class="icon"><i class="fa-regular fa-calendar-days"></i></span>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-lg-4 col-md-6">
+                              <div class="form-wrap"><label class="col-form-label">No of Years <span class="text-danger">*</span></label><input class="form-control" type="text" value="5"></div>
+                           </div>
+                           <div class="col-lg-12">
+                              <div class="form-wrap"><label class="col-form-label">Description <span class="text-danger">*</span></label><textarea class="form-control" rows="3"></textarea></div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="text-end"><a class="reset more-item" href="education.html" data-discover="true">Reset</a></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="modal-btn text-end"><a class="btn btn-gray" href="education.html" data-discover="true">Cancel</a><button class="btn btn-primary prime-btn">Save Changes</button></div>
+   </form>
+</div>
+                     </div>
+                  </div>
+               </div>
+               
+               <!-- Footer --> 
+               <footer class="footer inner-footer footer-info">
+                  <div class="footer-top">
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-lg-8">
+                              <div class="row">
+                                 <div class="col-lg-3 col-md-3">
+                                    <div class="footer-widget footer-menu">
+                                       <h6 class="footer-title">Company</h6>
+                                       <ul>
+                                          <li><a href="#" data-discover="true">About</a></li>
+                                          <li><a href="#" data-discover="true">Features</a></li>
+                                          <li><a href="dashboard.html" data-discover="true">Works</a></li>
+                                          <li><a href="dashboard.html" data-discover="true">Careers</a></li>
+                                          <li><a href="dashboard.html" data-discover="true">Locations</a></li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-3 col-md-3">
+                                    <div class="footer-widget footer-menu">
+                                       <h6 class="footer-title">Treatments</h6>
+                                       <ul>
+                                          <li><a href="#" data-discover="true">Dental</a></li>
+                                          <li><a href="#" data-discover="true">Cardiac</a></li>
+                                          <li><a href="#" data-discover="true">Spinal Cord</a></li>
+                                          <li><a href="#" data-discover="true">Hair Growth</a></li>
+                                          <li><a href="#" data-discover="true">Anemia &amp; Disorder</a></li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-3 col-md-3">
+                                    <div class="footer-widget footer-menu">
+                                       <h6 class="footer-title">Specialities</h6>
+                                       <ul>
+                                          <li><a href="#" data-discover="true">Transplant</a></li>
+                                          <li><a href="#" data-discover="true">Cardiologist</a></li>
+                                          <li><a href="#" data-discover="true">Oncology</a></li>
+                                          <li><a href="#" data-discover="true">Pediatrics</a></li>
+                                          <li><a href="#" data-discover="true">Gynacology</a></li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-3 col-md-3">
+                                    <div class="footer-widget footer-menu">
+                                       <h6 class="footer-title">Utilites</h6>
+                                       <ul>
+                                          <li><a href="#" data-discover="true">Pricing</a></li>
+                                          <li><a href="#" data-discover="true">Contact</a></li>
+                                          <li><a href="#" data-discover="true">Request A Quote</a></li>
+                                          <li><a href="dashboard.html" data-discover="true">Premium Membership</a></li>
+                                          <li><a href="dashboard.html" data-discover="true">Integrations</a></li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-lg-4 col-md-7">
+                              <div class="footer-widget">
+                                 <h6 class="footer-title">Newsletter</h6>
+                                 <p class="mb-2">Subscribe &amp; Stay Updated from the Doccure</p>
+                                 <div class="subscribe-input">
+                                    <form action="#"><input class="form-control" placeholder="Enter Email Address" type="email"><button type="submit" class="btn btn-md btn-primary-gradient d-inline-flex align-items-center"><i class="isax isax-send-25 me-1"></i>Send</button></form>
+                                 </div>
+                                 <div class="social-icon">
+                                    <h6 class="mb-3">Connect With Us</h6>
+                                    <ul>
+                                       <li><a href="dashboard.html" data-discover="true"><i class="fa-brands fa-facebook"></i></a></li>
+                                       <li><a href="dashboard.html" data-discover="true"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                       <li><a href="dashboard.html" data-discover="true"><i class="fa-brands fa-instagram"></i></a></li>
+                                       <li><a href="dashboard.html" data-discover="true"><i class="fa-brands fa-linkedin"></i></a></li>
+                                       <li><a href="dashboard.html" data-discover="true"><i class="fa-brands fa-pinterest"></i></a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="footer-bg"><img class="footer-bg-01" alt="img" src="img/footer-bg-01.png"><img class="footer-bg-02" alt="img" src="img/footer-bg-02.png"><img class="footer-bg-03" alt="img" src="img/footer-bg-03.png"><img class="footer-bg-04" alt="img" src="img/footer-bg-04.png"><img class="footer-bg-05" alt="img" src="img/footer-bg-05.png"></div>
+                  </div>
+                  <div class="footer-bottom">
+                     <div class="container">
+                        <div class="copyright">
+                           <div class="copyright-text">
+                              <p class="mb-0">Copyright © 2025 Doccure. All Rights Reserved</p>
+                           </div>
+                           <div class="copyright-menu">
+                              <ul class="policy-menu">
+                                 <li><a href="dashboard.html" data-discover="true">Legal Notice</a></li>
+                                 <li><a href="#" data-discover="true">Privacy Policy</a></li>
+                                 <li><a href="dashboard.html" data-discover="true">Refund Policy</a></li>
+                              </ul>
+                           </div>
+                           <ul class="payment-method">
+                              <li><a href="dashboard.html" data-discover="true"><img alt="Img" src="img/card-01.svg"></a></li>
+                              <li><a href="dashboard.html" data-discover="true"><img alt="Img" src="img/card-02.svg"></a></li>
+                              <li><a href="dashboard.html" data-discover="true"><img alt="Img" src="img/card-03.svg"></a></li>
+                              <li><a href="dashboard.html" data-discover="true"><img alt="Img" src="img/card-04.svg"></a></li>
+                              <li><a href="dashboard.html" data-discover="true"><img alt="Img" src="img/card-05.svg"></a></li>
+                              <li><a href="dashboard.html" data-discover="true"><img alt="Img" src="img/card-06.svg"></a></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </footer>
+            </div>
+         </div>
+         <div class="sidebar-overlay"></div>
+      </div>
+   </div>
+   <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;3ca157e612a14eccbb30cf6db6691c29&quot;,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+</body>
+</html>
