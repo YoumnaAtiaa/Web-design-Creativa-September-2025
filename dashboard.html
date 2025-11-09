@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doccure</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+   <!-- Custom CSS -->
+  <link rel="stylesheet" href="Css/style.css">
+  <link rel="stylesheet" href="Css/style-main.css">
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="0">
+   <div id="root">
+      <div>
+         <div class="main-wrapper">
+            <div>
+               <header class="header header header-custom header-fixed inner-header relative">
+                  <div class="container">
+                     <nav class="navbar navbar-expand-lg header-nav">
+                        <div class="navbar-header"><a id="mobile_btn" href="dashboard.html" data-discover="true"><span class="bar-icon"><span></span><span></span><span></span></span></a><a class="navbar-brand logo" href="index.html" data-discover="true"><img class="img-fluid" alt="Logo" src="img/logo.svg"></a></div>
+                        <div class="main-menu-wrapper">
+                           <div class="menu-header">
+                              <a class="menu-logo" href="index.html" data-discover="true"><img class="img-fluid" alt="Logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMkAAAA0CAMAAAAXFOzwAAAC+lBMVEUAAAAZbJ8aYJUbWpAbWpAOzO8M4P8bWpAbWpAbW5EbW5EZbaAN0/QM4P8bWpAM4P8bW5EbWpAM4P8aYpcbW5EaXZMYc6UaXJIaXJIM4P8M4P8bWpAM2/sM2fkM3PwbWpAbWpAaYpcXe6sbW5EWhrUbWpAM3v4M3v4Vi7kbW5EaX5QbWpAbW5EaYpcaXJIM2fkM2PkWgLAM4P8aW5EbWpEM4P8bWpAM3v4aW5EQt90M3f0SqtITocsWgrEZbqEM4P8ZZpoaXJIM4P8M4P8M3f0Oyu0Ya54M4P8M3f0PwOUOzvEM4P8Zap4ZZpoPxekbWpAM4P8Wg7IM4P8bWpAbWpAM3v4aW5EUlcESqdIZZZkaXJIXe6wM4P8VibcM2/sRstkSqdIM4P8N0/UWgLAM3/4aXZMM3/8WhLMUkb4M3/4RsNgN1fYNz/EXe6wUkr8M3/4aXJIRs9oN0/QVirgTnMcOzvASqdIXfa0Tn8oN1vcPweYTnskRr9YSq9MXeKkN0/QM4P8Nz/IQvOERq9QTpM4QuN4ZZpsSq9MbWpAPv+QPxOgbWpAM3fwRstkN1PUbWpERstkUkr8bW5ERr9cWhrUYcqQM4P8Xf68ToMsRrNQYcaMaX5QN0fIXe6sOy+0TncgM3PwZZ5sYdqgM4P8TossXfa0aY5cSqdIQuN4VirgTm8YWhbQXe6wTocsN1fYN1/cWg7MOzvAUlMAPwuYUmMMXeqoXeqsYc6UWirgXfawUmMQaZ5sbWpAM4P8aYJYN2voaZJgaYpcZZ5sN1fYbXJISq9MSp9AbXpMN1PUaX5QOzvAO0vMPyOsYcqQN1/gSrdUN2PkYdqcSqdIVirgM3PwO0PIQud8Za54PweYQvuMTncgM3v4M3f0Oyu0UmMMUk78XfK0VkL0Xf68Xfq4ZcKITo80UmsUWhLQWgbEYdKYZbaAPw+gQu+ETpc4TocsVjbsWg7IXgLAZaZ0Rtt0RsdgRr9cWh7UXeqsOzO8Rs9oTn8oPxekUlcIYeKkwuhkVAAAAvHRSTlMAAx6rcguwkLX3PAwGHmTIZt2QZjgaMRQQ+9m6JhAV/Nacc0QrzodMPDMG5bKQSiwaCfXq4d+iem05Miofyr21poR/dG9saWZFIPrz7+7nv7urpn1dWiwR+Pby8e3Y0MvGwoZZVFM/FfDp5uXk397Vxa2plIh5cmtjYlhQS0M9PDgk5eDg1tbRwbKmmpmZlYtVNiUX+fj39fDvz8/IxsC9sa+nnZmXlYR4eHJNR/748OXbs5+chH1l+/bKuZ8S9H0AAAotSURBVGje3ZkHUFRnEID3KMGDgwTDSREOEpRyIIhUAQUEIqhREaTYaPbee++9ayyxl9jSe3JgAaMmGmOJGjURwQhqjIjGkuhM/vbq3VPITGZOvxlmDuYN8z5299/dHzAH7HZ3b1EImMlbB+2wgBeXEZXVVeVjAKBB11OnbqzrA/8z1k3tg93tdSpQxAM/keoBCmhWxMbExK7Qgwy/ldVVdysGZQFsRSInTryph/9C7/oifCITo8E0vq1eXe2KaBYXGW1aY9zigW0w7ecnp4Ixk97Ly87+/f3312waOQlEhIxYWVlVVV7xtQXAhlM3bpy4dq0lTTBtQhOGjU1CeoYLCNgusZGSAfBKkZS2bq2mgRE9h4gfiZsKcpoWDDj6w88/f//o0a/Hjx9v/6n8dyzNyz793Xe3f//z74sXL17/ZgLwNKqsrL57t6IsTQUwBoUEmdx8CzCvHzpw4ODB4uJjR46UlhoMYQlCBVkaZDgSEzn9fDQgIThO9oRrfVkKjRtwlIh8/+hXZPLPP7faJ4OImGGHDzORvy9ev/7bb08+iRVMqqveKS/b0AiX/tZVJ1Zdu8mZiEUwAb0UTbyYiZz8YBCR0s/4iR7uIKKg5CgyYSLI5NatCxfmWwNH8/4nD58+jURwSLDJkydXBvtxJqhIBo0ptAPC5Lda3uRNqMgxJIJMMJ4OtTdhuIlUfJuZeiJclD+LmQgXEmzyyy/zNFyFrD3Jh+QiDcmVK1f7+jETVCTvgAAyOc+bFHMhYXSxrb0JI9ydPxJEIq5i2abAiCwpQSI0JMexCIoIMvljEUut/rwINiEiyOTq4Fhmcre8q53Y5DxnIuQWj5fLc+qkWX5HTFw4/65xGnYkufGv7pOY0jOxfjf63aVLnbjk40TabByVPGXcqPkXbhGRP85NJId37smTVGTmyD0TJuwZOZiE5OqdM2nU5G55hcTkPG9CcyuQnFOOBkqGyETdoSGHFWfyqocGo/JwjwwvorQGgg/nMY4Vua5VW2py2Ze2mR7IBJf78GAVEKbNJybnzuXiv8bov0hIbs8cm8U6+ti+yOTOnTNf7SMm5eVlMpMakckRtRNgtIHUpKHIpLGzigN4E+G00r3CXp28uT3LrXwd8EwNJyKXe9ADmoVkFAjsIiE5d288Ep1BQ5IXKzp4B+OQnDnTAr/AmIqKsq4hYpOamnhqQnJLzUrDJYymkbPIRPgDCCbWwKPJLyJ0BkQr+nkI1hJU2mKRs/t7A+JdKrIYxHxKRO7lqmApLZKZsZKufgeLPHiwDCCrRUXZw4efq4Ci6tWupuZQTgNigkQEE0gwEGxrbwLRq2mlYKtXaaX7ggQfauIDAO4fEpOBOhCzYvo5ZPJ4ljUsoiZjZZMWMaksBHizoqzs4dOnDYBi0e48Mjn0Bm9Sypv0oiZBIhOVogmjE59ewfQE6AhSdG0vnz27f38Pa4DOtEgKQEpqc0wMhPSnIckCCSHL/DB2yASH5OkpwQR5HDpATci5JYuJpygmXt5OFH+9golvEaE3/6k1yNhGTH6aBjCKnltK41rsWtITt4MSbxIRJZNSwcTOkR3D1ESKjYJJNC1zX4AkmlwpICMRiSCTaICFpCcObAqmmZRNTuDRtTfBIsyEtBK1Py34CAOhHpgy6aBg0pSexD25gu/mDjKSiMiPUwCGk5C8aw2mmUhbyQRlEyJyw5TJa7QnBtogFnD9xNukSUMFE50bd3gpm2ARYoJFnmFCm/szTIiIYPI2FjkomMiwVNXJxL0byy5m0myqkQkSYSZk3vpYp2xyG5mMVTZ5+hQvJSKTA7yJsYiXFuqUXb2LOJOeXGuR4UNCUoJiVUDmrUfuYJqYbDI4bn+GCd4TpSYHlUy8MsG0yQIFk0SaU8G8U335IjwEh6RkgA4gmc7y4412ZQxA1loyy29SgZQQO0QINsEiYhMckmJqIhPxXKAFiYljkDfF1sW0iYaWSb5Q+21lR1NnklslwwFgShtishEkqBbl5ubOmbPIGvLoBOwHEva2wGyYzJlcE0zwUsJMOAMDRR0EUpPGoNgZJUOjD22ShE7AYEMjya2SZKz9MV1KpEFZev8+HhznaGA0NdkEYuy6V1ehEbhsHzLBIoKJ1sjEMyrTiU2PAcsBUftpJcmVNhGS+ilFlFbimG3GVVKCkwtRwFb35gCiJfH+X8jk9HsAMWvoejVSHLG0SiKCr1O+JCLX9gHFO4csJYIJ6SfOXqyw9c81yQcO+21FlG1A4Fb4hTpguHckRVJSEkmbz0AcErS5C1GZhETwBJyNx8btbHX/rA8w+qRVV2ORh18AQCG9g9gClHi6J0YJJqTHZ4ZSlYjnZld4UmtCUiduQ+xmz+be1dyCEhmtQYmV4tNvP82tgWw+HsWt7vPGp+Lhcemwxzi3SEgQsWvY6j5497IQgBC/3R9VVtOQYLfJq5AJWnjjG+AX3snuIPxlJtCLFUuU2CQsyoEjSHH7deUP3kTRBdKQIW5nzzKRD1K4ZNuIRcieOH3WrFnT7z1+TEXm0JQdixZetrp3R6x8wEQe7iWZtg6FBJnUtJs9ezYpEmTiFSI3gSUG9h0zkRFgp2QSKZuM2ZpIBke+3Bmp7cnqzrYrIoLLfUYMUEayOwi0J+KlpLKS5FbZF0D4EomghZcMjriV4IU3CoxM9FzVW5je410UTBLFJ1UniQkV+SAJBILb3xJMuJDMWAYcn0lMWEg+B4q+JTapISbsWmhoiLEJaNnkFaiqg4lbTxCjimzGiSAP2hN9pdvIPEGEFUleDAjs6SsWwSHpOgY4tOuEkBCR9cvBhAk4qdkEX2uT8EQPkBEd5yrOrQ8Xy4d4VfJ0ZEJEiMmM0dKRstEnTASZ4PuttEYg4BJPRViRRGhBbOLpDQwHA8XBhEmYC0RKL1Jfqd9ZAyZIWdjvEhPpURAMxngkz0MLLy2SvNFZIGfviL5o4SVF8tGOySAlKD4nhxTJwS6WQiP3V5N3tACOdDW3oljJTYbqQWMvRgeK6KLHLdy82cfXXWmAV6U23zVs2LBdE1M1YIo+jQpHpKXtKGzQB4xw/rbJ6/Fb4l+PqmcLAloLhLPkBxgXAL2FDBcwF7bkOGGh9QHO8IJjMftAfJOdYWhIfOGx2JlTXOxoCy8D/qHHAuHlYOixLv5QR7QOEREZWjAz0P2WJdQNK0eyFFvZgVnhvP5IaQLUCpWTLcLJxuD4WmZmUD3DEj2YFb3UpaULapUqGdydijOyAkj3zADz4jW0hYTaWD2fuVQE1ZX3XEcrlWpoqJnlFzgEGOrCULAIJYNYFPoyM5ZbdqmDSUOkgJiLsi0dzI5Mq4jAekZ0CAgLCwvogD82bBwY6IUFsII/3ooTwMEcTTAqI/TOGD35bMf/fytAC1GhnpYuEGF4UaeDdAN/12Lhj//d5Wg+w3Dd8LckNDZYOgFo09VdXvTJ07YxOrVD1Qa12Z1c/+GoC/A0hEY4wUuAs1OQFjD/Auu1pry2I0pQAAAAAElFTkSuQmCC"></a>
+                              <a id="menu_close" class="menu-close" href="dashboard.html" data-discover="true">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                 </svg>
+                              </a>
+                           </div>
+                           <ul class="main-nav ">
+                              <li class="">
+                                 <a class="" href="index.html" data-discover="true">Home</a>
+                              </li>
+                              <li class="has-submenu active"><a class="" href="#" data-discover="true">Doctors <i class="fas fa-chevron-down"></i></a>
+                                 <ul class="submenu d-block">
+                                    <li class=""><a href="dashboard.html" data-discover="true">Doctors Dashboard</a></li>
+                                    <li class=""><a href="#" data-discover="true">Appointments</a></li>
+                                    <li class=""><a href="#" data-discover="true">Available Timing</a></li>
+                                    <li class=""><a href="#" data-discover="true">Patient Profile</a></li>
+                                    <li class=""><a href="#" data-discover="true">Chat</a></li>
+                                    <li class=""><a href="#" data-discover="true">Invoice</a></li>
+                                    <li class=""><a href="#" data-discover="true">Profile Settings</a></li>
+                                    <li class=""><a href="#" data-discover="true">Reviews</a></li>
+                                    <li class=""><a href="#" data-discover="true">Doctor Register</a></li>
+                                    <li class=""><a href="#" data-discover="true">Blog</a></li>
+                                 </ul>
+                              </li>
+                              <li class="has-submenu "><a class="" href="#" data-discover="true">Patients <i class="fas fa-chevron-down"></i></a>
+                                 <ul class="submenu d-block">
+                                    <li class=""><a href="#" data-discover="true">Patient Dashboard</a></li>
+                                    <li class=""><a href="#" data-discover="true">Doctors</a></li>
+                                    <li class=""><a href="#" data-discover="true">Search Doctor</a></li>
+                                    <li class=""><a href="#" data-discover="true">Search Profile</a></li>
+                                    <li class=""><a href="#" data-discover="true">Booking</a></li>
+                                    <li class=""><a href="#" data-discover="true">Checkout</a></li>
+                                    <li class=""><a href="#" data-discover="true">Booking Success</a></li>
+                                    <li class=""><a href="#" data-discover="true">Chat</a></li>
+                                    <li class=""><a href="#" data-discover="true">Profile Settings</a></li>
+                                    <li class=""><a href="#" data-discover="true">Change Password</a></li>
+                                 </ul>
+                              </li>
+                              <li class="has-submenu "><a class="" href="#" data-discover="true">Pharmacy <i class="fas fa-chevron-down"></i></a>
+                                 <ul class="submenu d-block">
+                                    <li class=""><a href="#" data-discover="true">Pharmacy</a></li>
+                                    <li class=""><a href="#" data-discover="true">Pharmacy Details</a></li>
+                                    <li class=""><a href="#" data-discover="true">Pharmacy Search</a></li>
+                                    <li class=""><a href="#" data-discover="true">Product</a></li>
+                                    <li class=""><a href="#" data-discover="true">Product Description</a></li>
+                                    <li class=""><a href="#" data-discover="true">Cart</a></li>
+                                    <li class=""><a href="#" data-discover="true">Product Checkout</a></li>
+                                    <li class=""><a href="#" data-discover="true">Product Success</a></li>
+                                    <li class=""><a href="#" data-discover="true">Product Register</a></li>
+                                 </ul>
+                              </li>
+                              <li class="has-submenu ">
+                                 <a class="subdrop" href="#" data-discover="true">Pages <i class="fas fa-chevron-down"></i></a>
+                                 <ul class="submenu d-block">
+                                    <li class=""><a href="#" data-discover="true">About Us</a></li>
+                                    <li class=""><a href="#" data-discover="true">Contact Us</a></li>
+                                    <li class="has-submenu"><a href="#" data-discover="true">Other Pages </a></li>
+                                    <li class="has-submenu"><a href="#" data-discover="true">Authentication </a></li>
+                                    <li class="has-submenu"><a href="#" data-discover="true">Error </a></li>
+                                    <li class=""><a href="#" data-discover="true">Hospitals</a></li>
+                                    <li class=""><a href="#" data-discover="true">Speciality</a></li>
+                                    <li class=""><a href="#" data-discover="true">Clinic</a></li>
+                                    <li class="has-submenu "><a href="#" data-discover="true">Call </a></li>
+                                    <li class="has-submenu "><a href="#" data-discover="true">Invoices </a></li>
+                                 </ul>
+                              </li>
+                              <li class="has-submenu"><a class="" href="#" data-discover="true">Blog <i class="fas fa-chevron-down"></i></a>
+                                 <ul class="submenu d-block">
+                                    <li class=""><a href="#" data-discover="true">Blog List</a></li>
+                                    <li class=""><a href="#" data-discover="true">Blog Grid</a></li>
+                                    <li class=""><a href="#" data-discover="true">Blog Details</a></li>
+                                 </ul>
+                              </li>
+                              <li class="has-submenu"><a class="" href="#" data-discover="true">Admin<i class="fas fa-chevron-down"></i></a>
+                                 <ul class="submenu d-block">
+                                    <li class=""><a href="#" data-discover="true">Admin</a></li>
+                                    <li class=""><a href="#" data-discover="true">Pharmacy Admin</a></li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </div>
+                        <ul class="nav header-navbar-rht">
+                           <li class="searchbar">
+                              <a href="#" data-discover="true">
+                                 <i class="fa-solid fa-magnifying-glass"></i>
+                              </a>
+                              <div class="togglesearch d-none">
+                                 <form>
+                                    <div class="input-group"><input class="form-control" type="text"><button type="submit" class="btn">Search</button></div>
+                                 </form>
+                              </div>
+                           </li>
+                           <li class="header-theme noti-nav"><a id="dark-mode-toggle" class="theme-toggle activate " href="dashboard.html" data-discover="true"><i class="fa-solid fa-sun"></i></a></li>
+                           <li class="nav-item dropdown noti-nav me-3 pe-0">
+                              <a class="dropdown-toggle active-dot active-dot-danger nav-link p-0" data-bs-toggle="dropdown" href="dashboard.html" data-discover="true"><i class="fa-solid fa-bell"></i></a>
+                              <div class="dropdown-menu notifications dropdown-menu-end ">
+                                 <div class="topnav-dropdown-header"><span class="notification-title">Notifications</span></div>
+                                 <div class="noti-content">
+                                    <ul class="notification-list">
+                                       <li class="notification-message">
+                                          <a href="#" data-discover="true">
+                                             <div class="notify-block d-flex">
+                                                <span class="avatar"><img class="avatar-img" alt="Ruby perin" src="img/Dashboard/client-01.jpg"></span>
+                                                <div class="media-body">
+                                                   <h6>Travis Tremble <span class="notification-time">18.30 PM</span></h6>
+                                                   <p class="noti-details">Sent a amount of $210 for his Appointment <span class="noti-title">Dr.Ruby perin </span></p>
+                                                </div>
+                                             </div>
+                                          </a>
+                                       </li>
+                                       <li class="notification-message">
+                                          <a href="#" data-discover="true">
+                                             <div class="notify-block d-flex">
+                                                <span class="avatar"><img class="avatar-img" alt="Hendry Watt" src="img/Dashboard/client-02.jpg"></span>
+                                                <div class="media-body">
+                                                   <h6>Travis Tremble <span class="notification-time">12 Min Ago</span></h6>
+                                                   <p class="noti-details"> has booked her appointment to <span class="noti-title">Dr. Hendry Watt</span></p>
+                                                </div>
+                                             </div>
+                                          </a>
+                                       </li>
+                                       <li class="notification-message">
+                                          <a href="#" data-discover="true">
+                                             <div class="notify-block d-flex">
+                                                <div class="avatar"><img class="avatar-img" alt="Maria Dyen" src="img/Dashboard/client-03.jpg"></div>
+                                                <div class="media-body">
+                                                   <h6>Travis Tremble <span class="notification-time">6 Min Ago</span></h6>
+                                                   <p class="noti-details"> Sent a amount $210 for his Appointment <span class="noti-title">Dr.Maria Dyen</span></p>
+                                                </div>
+                                             </div>
+                                          </a>
+                                       </li>
+                                       <li class="notification-message">
+                                          <a href="#" data-discover="true">
+                                             <div class="notify-block d-flex">
+                                                <div class="avatar avatar-sm"><img class="avatar-img" alt="client-image" src="img/Dashboard/client-04.jpg"></div>
+                                                <div class="media-body">
+                                                   <h6>Travis Tremble <span class="notification-time">8.30 AM</span></h6>
+                                                   <p class="noti-details"> Send a message to his doctor</p>
+                                                </div>
+                                             </div>
+                                          </a>
+                                       </li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="nav-item noti-nav me-3 pe-0"><a class="dropdown-toggle nav-link active-dot active-dot-success p-0" href="#" data-discover="true"><i class="fa-solid fa-message"></i></a></li>
+                           <li class="nav-item dropdown noti-nav view-cart-header me-3 pe-0">
+                              <a class="dropdown-toggle nav-link active-dot active-dot-purple p-0 position-relative" data-bs-toggle="dropdown" href="dashboard.html" data-discover="true"><i class="fa-solid fa-cart-shopping"></i></a>
+                              <div class="dropdown-menu notifications dropdown-menu-end">
+                                 <div class="shopping-cart">
+                                    <ul class="shopping-cart-items list-unstyled">
+                                       <li class="clearfix">
+                                          <div class="close-icon"><i class="fa-solid fa-circle-xmark"></i></div>
+                                          <a href="" data-discover="true"><img class="avatar-img rounded" alt="User Image" src="img/product.jpg"></a><a class="item-name" href="#" data-discover="true">Benzaxapine Croplex</a><span class="item-price">$849.99</span><span class="item-quantity">Quantity: 01</span>
+                                       </li>
+                                       <li class="clearfix">
+                                          <div class="close-icon"><i class="fa-solid fa-circle-xmark"></i></div>
+                                          <a href="#" data-discover="true"><img class="avatar-img rounded" alt="User Image" src="img/product1.jpg"></a><a class="item-name" href="#" data-discover="true">Ombinazol Bonibamol</a><span class="item-price">$1,249.99</span><span class="item-quantity">Quantity: 01</span>
+                                       </li>
+                                       <li class="clearfix">
+                                          <div class="close-icon"><i class="fa-solid fa-circle-xmark"></i></div>
+                                          <a href="#" data-discover="true"><img class="avatar-img rounded" alt="User Image" src="img/product2.jpg"></a><a class="item-name" href="#" data-discover="true">Dantotate Dantodazole</a><span class="item-price">$129.99</span><span class="item-quantity">Quantity: 01</span>
+                                       </li>
+                                    </ul>
+                                    <div class="booking-summary pt-3">
+                                       <div class="booking-item-wrap">
+                                          <ul class="booking-date">
+                                             <li>Subtotal <span>$5,877.00</span></li>
+                                             <li>Shipping <span>$25.00</span></li>
+                                             <li>Tax <span>$0.00</span></li>
+                                             <li>Total <span>$5.2555</span></li>
+                                          </ul>
+                                          <div class="booking-total">
+                                             <ul class="booking-total-list text-align">
+                                                <li>
+                                                   <div class="clinic-booking pt-3"><a class="apt-btn" href="/react/template/Pharmacy/cart" data-discover="true">View Cart</a></div>
+                                                </li>
+                                                <li>
+                                                   <div class="clinic-booking pt-3"><a class="apt-btn" href="/react/template/Pharmacy/product-checkout" data-discover="true">Checkout</a></div>
+                                                </li>
+                                             </ul>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="nav-item dropdown has-arrow logged-item">
+                              <a class="nav-link ps-0" data-bs-toggle="dropdown" aria-expanded="false" href="dashboard.html" data-discover="true"><span class="user-img"><img class="rounded-circle" alt="Darren Elder" width="31" src="img/dashboard/doctor-profile-img.jpg"></span></a>
+                              <div class="dropdown-menu dropdown-menu-end">
+                                 <div class="user-header">
+                                    <div class="avatar avatar-sm"><img class="avatar-img rounded-circle" alt="User Image" src="img/doctor-profile-img.jpg"></div>
+                                    <div class="user-text">
+                                       <h6>Dr Edalin Hendry</h6>
+                                       <p class="text-muted mb-0">Doctor</p>
+                                    </div>
+                                 </div>
+                                 <a class="dropdown-item" href="dashboard.html" data-discover="true">Dashboard</a><a class="dropdown-item" href="profile-settings.html" data-discover="true">Profile Settings</a><a class="dropdown-item" href="#" data-discover="true">Logout</a>
+                              </div>
+                           </li>
+                        </ul>
+                     </nav>
+                  </div>
+               </header>
+               <div class="breadcrumb-bar">
+                  <div class="container">
+                     <div class="row align-items-center inner-banner">
+                        <div class="col-md-12 col-12 text-center">
+                           <nav aria-label="breadcrumb" class="page-breadcrumb">
+                              <ol class="breadcrumb">
+                                 <li class="breadcrumb-item"><a href="index.html" data-discover="true"><i class="fa-solid fa-house"></i></a></li>
+                                 <li class="breadcrumb-item" aria-current="page">Doctor</li>
+                                 <li class="breadcrumb-item active">Dashboard</li>
+                              </ol>
+                              <h2 class="breadcrumb-title">Dashboard</h2>
+                           </nav>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="breadcrumb-bg"><img class="breadcrumb-bg-01" alt="img" src="img/breadcrumb-bg-01.png"><img class="breadcrumb-bg-02" alt="img" src="img/breadcrumb-bg-02.png"><img class="breadcrumb-bg-03" alt="img" src="img/breadcrumb-icon.png"><img class="breadcrumb-bg-04" alt="img" src="img/breadcrumb-icon.png"></div>
+               </div>
+               <div class="content">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-lg-4 col-xl-3 theiaStickySidebar">
+                           <div class="stickybar">
+                              <div class="profile-sidebar doctor-sidebar profile-sidebar-new">
+                                 <div class="widget-profile pro-widget-content">
+                                    <div class="profile-info-widget">
+                                       <a class="booking-doc-img" href="doctor-profile.html" data-discover="true"><img alt="User Image" src="img/dashboard/doctor-thumb-02-Cbbh6L4C.jpg"></a>
+                                       <div class="profile-det-info">
+                                          <h3><a href="doctor-profile.html" data-discover="true">Dr Edalin Hendry</a></h3>
+                                          <div class="patient-details">
+                                             <h5 class="mb-0">BDS, MDS - Oral &amp; Maxillofacial Surgery</h5>
+                                          </div>
+                                          <span class="badge doctor-role-badge"><i class="fa-solid fa-circle"></i>Dentist</span>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="doctor-available-head">
+                                    <div class="">
+                                       <label class="form-label">Availability <span class="text-danger">*</span></label>
+                                       <div class="select css-b62m3t-container">
+                                          <span id="react-select-2-live-region" class="css-7pg0cj-a11yText"></span><span aria-live="polite" aria-atomic="false" aria-relevant="additions text" role="log" class="css-7pg0cj-a11yText"></span>
+                                          <div class="css-13cymwt-control">
+                                             <div class="css-hlgwow">
+                                                <div class="css-1dimb5e-singleValue">I am Available Now</div>
+                                                <div class="css-19bb58m" data-value=""><input class="" autocapitalize="none" autocomplete="off" autocorrect="off" id="react-select-2-input" spellcheck="false" tabindex="0" aria-autocomplete="list" aria-expanded="false" aria-haspopup="true" role="combobox" aria-activedescendant="" type="text" value="" style="color: inherit; background: 0px center; opacity: 1; width: 100%; grid-area: 1 / 2; font: inherit; min-width: 2px; border: 0px; margin: 0px; outline: 0px; padding: 0px;"></div>
+                                             </div>
+                                             <div class="css-1wy0on6">
+                                                <span class="css-1u9des2-indicatorSeparator"></span>
+                                                <div class="css-1xc3v61-indicatorContainer" aria-hidden="true">
+                                                   <svg height="20" width="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false" class="css-8mmkcg">
+                                                      <path d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"></path>
+                                                   </svg>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="dashboard-widget">
+                                    <nav class="dashboard-menu">
+                                       <ul>
+                                          <li class="active"><a href="#" data-discover="true"><i class="fa-solid fa-grip"></i><span>Dashboard</span></a></li>
+                                          <li class=""><a href="#" data-discover="true"><i class="fa-solid fa-clipboard"></i><span>Requests</span><small class="unread-msg">2</small></a></li>
+                                          <li class=""><a href="#" data-discover="true"><i class="fa-solid fa-calendar"></i><span>Appointments</span></a></li>
+                                          <li class=""><a href="#" data-discover="true"><i class="fa-solid fa-calendar-day"></i><span>Available Timings</span></a></li>
+                                          <li class=""><a href="#" data-discover="true"><i class="fa-solid fa-user-injured me-2"></i><span>My Patients</span></a></li>
+                                          <li class=""><a href="#" data-discover="true"><i class="fa-solid fa-clock"></i><span>Specialties &amp; Services</span></a></li>
+                                          <li class=""><a href="#" data-discover="true"><i class="fa-solid fa-star"></i><span>Reviews</span></a></li>
+                                          <li class=""><a href="#" data-discover="true"><i class="fa-solid fa-user"></i><span>Accounts</span></a></li>
+                                          <li class=""><a href="#" data-discover="true"><i class="fa-solid fa-file-lines"></i><span>Invoices</span></a></li>
+                                          <li class=""><a href="#" data-discover="true"><i class="fa-solid fa-money-bill-1 me-2"></i><span>Payout Settings</span></a></li>
+                                          <li><a href="#" data-discover="true"><i class="fa-solid fa-message"></i><span>Message</span><small class="unread-msg">7</small></a></li>
+                                          <li class=""><a href="profile-settings.html" data-discover="true"><i class="fa-solid fa-gear"></i><span>Profile Settings</span></a></li>
+                                          <li class=""><a href="#" data-discover="true"><i class="fa-solid fa-shield-halved"></i><span>Social Media</span></a></li>
+                                          <li class=""><a href="#" data-discover="true"><i class="fa-solid fa-key"></i><span>Change Password</span></a></li>
+                                          <li class=""><a href="#" data-discover="true"><i class="fa-solid fa-arrow-right-from-bracket"></i><span>Logout</span></a></li>
+                                       </ul>
+                                    </nav>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-8 col-xl-9">
+                           <div class="row">
+                              <div class="col-xl-4 d-flex">
+                                 <div class="dashboard-box-col w-100">
+                                    <div class="dashboard-widget-box">
+                                       <div class="dashboard-content-info">
+                                          <h6>Total Patient</h6>
+                                          <h4>978</h4>
+                                          <span class="text-success"><i class="fa-solid fa-arrow-up"></i>15% From Last Week</span>
+                                       </div>
+                                       <div class="dashboard-widget-icon"><span class="dash-icon-box"><i class="fa-solid fa-user-injured"></i></span></div>
+                                    </div>
+                                    <div class="dashboard-widget-box">
+                                       <div class="dashboard-content-info">
+                                          <h6>Patients Today</h6>
+                                          <h4>80</h4>
+                                          <span class="text-danger"><i class="fa-solid fa-arrow-up"></i>15% From Yesterday</span>
+                                       </div>
+                                       <div class="dashboard-widget-icon"><span class="dash-icon-box"><i class="fa-solid fa-user-clock"></i></span></div>
+                                    </div>
+                                    <div class="dashboard-widget-box">
+                                       <div class="dashboard-content-info">
+                                          <h6>Appointments Today</h6>
+                                          <h4>50</h4>
+                                          <span class="text-success"><i class="fa-solid fa-calendar-days"></i>20% From Yesterday</span>
+                                       </div>
+                                       <div class="dashboard-widget-icon"><span class="dash-icon-box"><i class="fa-solid fa-calendar-days"></i></span></div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-xl-8 d-flex">
+                                 <div class="dashboard-card w-100">
+                                    <div class="dashboard-card-head">
+                                       <div class="header-title">
+                                          <h5>Appointment</h5>
+                                       </div>
+                                       <div class="dropdown header-dropdown">
+                                          <a class="dropdown-toggle nav-tog" data-bs-toggle="dropdown" href="dashboard.html" data-discover="true">Last 7 Days</a>
+                                          <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="dashboard.html" data-discover="true">Today</a><a class="dropdown-item" href="dashboard.html" data-discover="true">This Month</a><a class="dropdown-item" href="dashboard.html" data-discover="true">Last 7 Days</a></div>
+                                       </div>
+                                    </div>
+                                    <div class="dashboard-card-body">
+                                       <div class="table-responsive">
+                                          <table class="table dashboard-table">
+                                             <tbody>
+                                                <tr>
+                                                   <td>
+                                                      <div class="patient-info-profile">
+                                                         <a class="table-avatar" href="/react/template/doctor/appointments" data-discover="true"><img alt="Img" src="img/dashboard/profile-01-DT2Z6e8O.jpg"></a>
+                                                         <div class="patient-name-info">
+                                                            <span>#Apt0001</span>
+                                                            <h5><a href="/react/template/doctor/appointments" data-discover="true">Adrian Marshall</a></h5>
+                                                         </div>
+                                                      </div>
+                                                   </td>
+                                                   <td>
+                                                      <div class="appointment-date-created">
+                                                         <h6>11 Nov 2025 10.45 AM</h6>
+                                                         <span class="badge table-badge">General</span>
+                                                      </div>
+                                                   </td>
+                                                   <td>
+                                                      <div class="apponiment-actions d-flex align-items-center"><a class="text-success me-2" href="dashboard.html" data-discover="true"><i class="fa-solid fa-check"></i></a><a class="text-danger" href="/react/template/doctor/doctor-dashboard" data-discover="true"><i class="fa-solid fa-xmark"></i></a></div>
+                                                   </td>
+                                                </tr>
+                                                <tr>
+                                                   <td>
+                                                      <div class="patient-info-profile">
+                                                         <a class="table-avatar" href="/react/template/doctor/appointments" data-discover="true"><img alt="Img" src="img/dashboard/profile-02-CfwraHe7.jpg"></a>
+                                                         <div class="patient-name-info">
+                                                            <span>#Apt0002</span>
+                                                            <h5><a href="/react/template/doctor/appointments" data-discover="true">Kelly Stevens</a></h5>
+                                                         </div>
+                                                      </div>
+                                                   </td>
+                                                   <td>
+                                                      <div class="appointment-date-created">
+                                                         <h6>10 Nov 2025 11.00 AM</h6>
+                                                         <span class="badge table-badge">Clinic Consulting</span>
+                                                      </div>
+                                                   </td>
+                                                   <td>
+                                                      <div class="apponiment-actions d-flex align-items-center"><a class="text-success me-2" href="dashboard.html" data-discover="true"><i class="fa-solid fa-check"></i></a><a class="text-danger" href="/react/template/doctor/doctor-dashboard" data-discover="true"><i class="fa-solid fa-xmark"></i></a></div>
+                                                   </td>
+                                                </tr>
+                                                <tr>
+                                                   <td>
+                                                      <div class="patient-info-profile">
+                                                         <a class="table-avatar" href="/react/template/doctor/appointments" data-discover="true"><img alt="Img" src="img/dashboard/profile-03-ComJhJvI.jpg"></a>
+                                                         <div class="patient-name-info">
+                                                            <span>#Apt0003</span>
+                                                            <h5><a href="/react/template/doctor/appointments" data-discover="true">Samuel Anderson</a></h5>
+                                                         </div>
+                                                      </div>
+                                                   </td>
+                                                   <td>
+                                                      <div class="appointment-date-created">
+                                                         <h6>03 Nov 2025 02.00 PM</h6>
+                                                         <span class="badge table-badge">General</span>
+                                                      </div>
+                                                   </td>
+                                                   <td>
+                                                      <div class="apponiment-actions d-flex align-items-center"><a class="text-success me-2" href="dashboard.html" data-discover="true"><i class="fa-solid fa-check"></i></a><a class="text-danger" href="/react/template/doctor/doctor-dashboard" data-discover="true"><i class="fa-solid fa-xmark"></i></a></div>
+                                                   </td>
+                                                </tr>
+                                                <tr>
+                                                   <td>
+                                                      <div class="patient-info-profile">
+                                                         <a class="table-avatar" href="/react/template/doctor/appointments" data-discover="true"><img alt="Img" src="img/dashboard/profile-04-CEtoD4p6.jpg"></a>
+                                                         <div class="patient-name-info">
+                                                            <span>#Apt0004</span>
+                                                            <h5><a href="/react/template/doctor/appointments" data-discover="true">Catherine Griffin</a></h5>
+                                                         </div>
+                                                      </div>
+                                                   </td>
+                                                   <td>
+                                                      <div class="appointment-date-created">
+                                                         <h6>01 Nov 2025 04.00 PM</h6>
+                                                         <span class="badge table-badge">Clinic Consulting</span>
+                                                      </div>
+                                                   </td>
+                                                   <td>
+                                                      <div class="apponiment-actions d-flex align-items-center"><a class="text-success me-2" href="dashboard.html" data-discover="true"><i class="fa-solid fa-check"></i></a><a class="text-danger" href="dashboard.html" data-discover="true"><i class="fa-solid fa-xmark"></i></a></div>
+                                                   </td>
+                                                </tr>
+                                                <tr>
+                                                   <td>
+                                                      <div class="patient-info-profile">
+                                                         <a class="table-avatar" href="/react/template/doctor/appointments" data-discover="true"><img alt="Img" src="img/dashboard/profile-05-C4xc7dns.jpg"></a>
+                                                         <div class="patient-name-info">
+                                                            <span>#Apt0005</span>
+                                                            <h5><a href="/react/template/doctor/appointments" data-discover="true">Robert Hutchinson</a></h5>
+                                                         </div>
+                                                      </div>
+                                                   </td>
+                                                   <td>
+                                                      <div class="appointment-date-created">
+                                                         <h6>28 Oct 2025 05.30 PM</h6>
+                                                         <span class="badge table-badge">General</span>
+                                                      </div>
+                                                   </td>
+                                                   <td>
+                                                      <div class="apponiment-actions d-flex align-items-center"><a class="text-success me-2" href="dashboard.html" data-discover="true"><i class="fa-solid fa-check"></i></a><a class="text-danger" href="dashboard.html" data-discover="true"><i class="fa-solid fa-xmark"></i></a></div>
+                                                   </td>
+                                                </tr>
+                                             </tbody>
+                                          </table>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-xl-5 d-flex">
+                                 <div class="dashboard-chart-col w-100">
+                                    <div class="dashboard-card w-100">
+                                       <div class="dashboard-card-head border-0">
+                                          <div class="header-title">
+                                             <h5>Weekly Overview</h5>
+                                          </div>
+                                          <div class="chart-create-date">
+                                             <h6>Mar 14 - Mar 21</h6>
+                                          </div>
+                                       </div>
+                                       <div class="dashboard-card-body">
+                                          <div class="chart-tab">
+                                             <ul class="nav nav-pills product-licence-tab" id="pills-tab2" role="tablist">
+                                                <li class="nav-item" role="presentation"><button class="nav-link active" id="pills-revenue-tab" data-bs-toggle="pill" data-bs-target="#pills-revenue" type="button" role="tab" aria-controls="pills-revenue" aria-selected="false">Revenue</button></li>
+                                                <li class="nav-item" role="presentation"><button class="nav-link" id="pills-appointment-tab" data-bs-toggle="pill" data-bs-target="#pills-appointment" type="button" role="tab" aria-controls="pills-appointment" aria-selected="true">Appointments</button></li>
+                                             </ul>
+                                             <div class="tab-content w-100" id="v-pills-tabContent">
+                                                <div class="tab-pane fade show active" id="pills-revenue" role="tabpanel" aria-labelledby="pills-revenue-tab">
+                                                   <div style="min-height: 235px;">
+                                                      <div id="apexchartskt5gaqdw" class="apexcharts-canvas apexchartskt5gaqdw apexcharts-theme-light" style="width: 347px; height: 220px;">
+                                                         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" class="apexcharts-svg" xmlns:data="ApexChartsNS" transform="translate(0, 0)" width="347" height="220">
+                                                            <foreignObject x="0" y="0" width="347" height="220">
+                                                               <style type="text/css">.apexcharts-flip-y {
+                                                                  transform: scaleY(-1) translateY(-100%);
+                                                                  transform-origin: top;
+                                                                  transform-box: fill-box;
+                                                                  }
+                                                                  .apexcharts-flip-x {
+                                                                  transform: scaleX(-1);
+                                                                  transform-origin: center;
+                                                                  transform-box: fill-box;
+                                                                  }
+                                                                  .apexcharts-legend {
+                                                                  display: flex;
+                                                                  overflow: auto;
+                                                                  padding: 0 10px;
+                                                                  }
+                                                                  .apexcharts-legend.apexcharts-legend-group-horizontal {
+                                                                  flex-direction: column;
+                                                                  }
+                                                                  .apexcharts-legend-group {
+                                                                  display: flex;
+                                                                  }
+                                                                  .apexcharts-legend-group-vertical {
+                                                                  flex-direction: column-reverse;
+                                                                  }
+                                                                  .apexcharts-legend.apx-legend-position-bottom, .apexcharts-legend.apx-legend-position-top {
+                                                                  flex-wrap: wrap
+                                                                  }
+                                                                  .apexcharts-legend.apx-legend-position-right, .apexcharts-legend.apx-legend-position-left {
+                                                                  flex-direction: column;
+                                                                  bottom: 0;
+                                                                  }
+                                                                  .apexcharts-legend.apx-legend-position-bottom.apexcharts-align-left, .apexcharts-legend.apx-legend-position-top.apexcharts-align-left, .apexcharts-legend.apx-legend-position-right, .apexcharts-legend.apx-legend-position-left {
+                                                                  justify-content: flex-start;
+                                                                  align-items: flex-start;
+                                                                  }
+                                                                  .apexcharts-legend.apx-legend-position-bottom.apexcharts-align-center, .apexcharts-legend.apx-legend-position-top.apexcharts-align-center {
+                                                                  justify-content: center;
+                                                                  align-items: center;
+                                                                  }
+                                                                  .apexcharts-legend.apx-legend-position-bottom.apexcharts-align-right, .apexcharts-legend.apx-legend-position-top.apexcharts-align-right {
+                                                                  justify-content: flex-end;
+                                                                  align-items: flex-end;
+                                                                  }
+                                                                  .apexcharts-legend-series {
+                                                                  cursor: pointer;
+                                                                  line-height: normal;
+                                                                  display: flex;
+                                                                  align-items: center;
+                                                                  }
+                                                                  .apexcharts-legend-text {
+                                                                  position: relative;
+                                                                  font-size: 14px;
+                                                                  }
+                                                                  .apexcharts-legend-text *, .apexcharts-legend-marker * {
+                                                                  pointer-events: none;
+                                                                  }
+                                                                  .apexcharts-legend-marker {
+                                                                  position: relative;
+                                                                  display: flex;
+                                                                  align-items: center;
+                                                                  justify-content: center;
+                                                                  cursor: pointer;
+                                                                  margin-right: 1px;
+                                                                  }
+                                                                  .apexcharts-legend-series.apexcharts-no-click {
+                                                                  cursor: auto;
+                                                                  }
+                                                                  .apexcharts-legend .apexcharts-hidden-zero-series, .apexcharts-legend .apexcharts-hidden-null-series {
+                                                                  display: none !important;
+                                                                  }
+                                                                  .apexcharts-inactive-legend {
+                                                                  opacity: 0.45;
+                                                                  } 
+                                                               </style>
+                                                            </foreignObject>
+                                                            <g class="apexcharts-datalabels-group" transform="translate(0, 0) scale(1)"></g>
+                                                            <g class="apexcharts-datalabels-group" transform="translate(0, 0) scale(1)"></g>
+                                                            <g class="apexcharts-yaxis" rel="0" transform="translate(9.51767635345459, 0)">
+                                                               <g class="apexcharts-yaxis-texts-g">
+                                                                  <text x="20" y="33.666666666666664" text-anchor="end" dominant-baseline="auto" font-size="11px" font-family="Helvetica, Arial, sans-serif" font-weight="400" fill="#373d3f" class="apexcharts-text apexcharts-yaxis-label " style="font-family: Helvetica, Arial, sans-serif;">
+                                                                     <tspan>80</tspan>
+                                                                     <title>80</title>
+                                                                  </text>
+                                                                  <text x="20" y="71.91546651236216" text-anchor="end" dominant-baseline="auto" font-size="11px" font-family="Helvetica, Arial, sans-serif" font-weight="400" fill="#373d3f" class="apexcharts-text apexcharts-yaxis-label " style="font-family: Helvetica, Arial, sans-serif;">
+                                                                     <tspan>60</tspan>
+                                                                     <title>60</title>
+                                                                  </text>
+                                                                  <text x="20" y="110.16426635805766" text-anchor="end" dominant-baseline="auto" font-size="11px" font-family="Helvetica, Arial, sans-serif" font-weight="400" fill="#373d3f" class="apexcharts-text apexcharts-yaxis-label " style="font-family: Helvetica, Arial, sans-serif;">
+                                                                     <tspan>40</tspan>
+                                                                     <title>40</title>
+                                                                  </text>
+                                                                  <text x="20" y="148.41306620375315" text-anchor="end" dominant-baseline="auto" font-size="11px" font-family="Helvetica, Arial, sans-serif" font-weight="400" fill="#373d3f" class="apexcharts-text apexcharts-yaxis-label " style="font-family: Helvetica, Arial, sans-serif;">
+                                                                     <tspan>20</tspan>
+                                                                     <title>20</title>
+                                                                  </text>
+                                                                  <text x="20" y="186.66186604944863" text-anchor="end" dominant-baseline="auto" font-size="11px" font-family="Helvetica, Arial, sans-serif" font-weight="400" fill="#373d3f" class="apexcharts-text apexcharts-yaxis-label " style="font-family: Helvetica, Arial, sans-serif;">
+                                                                     <tspan>0</tspan>
+                                                                     <title>0</title>
+                                                                  </text>
+                                                               </g>
+                                                            </g>
+                                                            <g class="apexcharts-inner apexcharts-graphical" transform="translate(39.51767635345459, 30)">
+                                                               <defs>
+                                                                  <linearGradient x1="0" y1="0" x2="0" y2="1" id="SvgjsLinearGradient1001">
+                                                                     <stop stop-opacity="0.4" stop-color="rgba(216,227,240,0.4)" offset="0"></stop>
+                                                                     <stop stop-opacity="0.5" stop-color="rgba(190,209,230,0.5)" offset="1"></stop>
+                                                                     <stop stop-opacity="0.5" stop-color="rgba(190,209,230,0.5)" offset="1"></stop>
+                                                                  </linearGradient>
+                                                                  <clipPath id="gridRectMaskkt5gaqdw">
+                                                                     <rect width="302.4823236465454" height="157.99519938278198" x="-2.5" y="-2.5" rx="0" ry="0" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0" fill="#fff"></rect>
+                                                                  </clipPath>
+                                                                  <clipPath id="gridRectBarMaskkt5gaqdw">
+                                                                     <rect width="302.4823236465454" height="157.99519938278198" x="-2.5" y="-2.5" rx="0" ry="0" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0" fill="#fff"></rect>
+                                                                  </clipPath>
+                                                                  <clipPath id="gridRectMarkerMaskkt5gaqdw">
+                                                                     <rect width="302.4823236465454" height="152.99519938278198" x="-2.5" y="0" rx="0" ry="0" opacity="1" stroke-width="0" stroke="none" stroke-dasharray="0" fill="#fff"></rect>
+                                                                  </clipPath>
+                                                                  <clipPath id="forecastMaskkt5gaqdw"></clipPath>
+                                                                  <clipPath id="nonForecastMaskkt5gaqdw"></clipPath>
+                                                               </defs>
+                                                               <rect width="21.24873740332467" height="152.99519938278198" x="0" y="0" rx="0" ry="0" opacity="1" stroke-width="0" stroke="#b6b6b6" stroke-dasharray="3" fill="url(#SvgjsLinearGradient1001)" class="apexcharts-xcrosshairs" y2="152.99519938278198" filter="none" fill-opacity="0.9"></rect>
+                                                               <line x1="0" y1="152.99519938278198" x2="0" y2="158.99519938278198" stroke="#e0e0e0" stroke-dasharray="0" stroke-linecap="butt" class="apexcharts-xaxis-tick"></line>
+                                                               <line x1="42.49747480664934" y1="152.99519938278198" x2="42.49747480664934" y2="158.99519938278198" stroke="#e0e0e0" stroke-dasharray="0" stroke-linecap="butt" class="apexcharts-xaxis-tick"></line>
+                                                               <line x1="84.99494961329869" y1="152.99519938278198" x2="84.99494961329869" y2="158.99519938278198" stroke="#e0e0e0" stroke-dasharray="0" stroke-linecap="butt" class="apexcharts-xaxis-tick"></line>
+                                                               <line x1="127.49242441994804" y1="152.99519938278198" x2="127.49242441994804" y2="158.99519938278198" stroke="#e0e0e0" stroke-dasharray="0" stroke-linecap="butt" class="apexcharts-xaxis-tick"></line>
+                                                               <line x1="169.98989922659737" y1="152.99519938278198" x2="169.98989922659737" y2="158.99519938278198" stroke="#e0e0e0" stroke-dasharray="0" stroke-linecap="butt" class="apexcharts-xaxis-tick"></line>
+                                                               <line x1="212.4873740332467" y1="152.99519938278198" x2="212.4873740332467" y2="158.99519938278198" stroke="#e0e0e0" stroke-dasharray="0" stroke-linecap="butt" class="apexcharts-xaxis-tick"></line>
+                                                               <line x1="254.98484883989605" y1="152.99519938278198" x2="254.98484883989605" y2="158.99519938278198" stroke="#e0e0e0" stroke-dasharray="0" stroke-linecap="butt" class="apexcharts-xaxis-tick"></line>
+                                                               <line x1="297.4823236465454" y1="152.99519938278198" x2="297.4823236465454" y2="158.99519938278198" stroke="#e0e0e0" stroke-dasharray="0" stroke-linecap="butt" class="apexcharts-xaxis-tick"></line>
+                                                               <g class="apexcharts-grid">
+                                                                  <g class="apexcharts-gridlines-horizontal">
+                                                                     <line x1="0" y1="38.248799845695494" x2="297.4823236465454" y2="38.248799845695494" stroke="#e0e0e0" stroke-dasharray="0" stroke-linecap="butt" class="apexcharts-gridline"></line>
+                                                                     <line x1="0" y1="76.49759969139099" x2="297.4823236465454" y2="76.49759969139099" stroke="#e0e0e0" stroke-dasharray="0" stroke-linecap="butt" class="apexcharts-gridline"></line>
+                                                                     <line x1="0" y1="114.74639953708649" x2="297.4823236465454" y2="114.74639953708649" stroke="#e0e0e0" stroke-dasharray="0" stroke-linecap="butt" class="apexcharts-gridline"></line>
+                                                                  </g>
+                                                                  <g class="apexcharts-gridlines-vertical"></g>
+                                                                  <line x1="0" y1="152.99519938278198" x2="297.4823236465454" y2="152.99519938278198" stroke="transparent" stroke-dasharray="0" stroke-linecap="butt"></line>
+                                                                  <line x1="0" y1="1" x2="0" y2="152.99519938278198" stroke="transparent" stroke-dasharray="0" stroke-linecap="butt"></line>
+                                                               </g>
+                                                               <g class="apexcharts-grid-borders">
+                                                                  <line x1="0" y1="0" x2="297.4823236465454" y2="0" stroke="#e0e0e0" stroke-dasharray="0" stroke-linecap="butt" class="apexcharts-gridline"></line>
+                                                                  <line x1="0" y1="152.99519938278198" x2="297.4823236465454" y2="152.99519938278198" stroke="#e0e0e0" stroke-dasharray="0" stroke-linecap="butt" class="apexcharts-gridline"></line>
+                                                                  <line x1="0" y1="152.99519938278198" x2="297.4823236465454" y2="152.99519938278198" stroke="#e0e0e0" stroke-dasharray="0" stroke-width="1" stroke-linecap="butt"></line>
+                                                               </g>
+                                                               <g class="apexcharts-bar-series apexcharts-plot-series">
+                                                                  <g class="apexcharts-series" seriesName="High" rel="1" data:realIndex="0">
+                                                                     <path d="M 11.124368701662336 147.49619938278198 L 11.124368701662336 62.87419976854324 C 11.124368701662336 60.37419976854324 13.624368701662334 57.87419976854324 16.124368701662334 57.87419976854324 L 26.37310610498701 57.87419976854324 C 28.87310610498701 57.87419976854324 31.37310610498701 60.37419976854324 31.37310610498701 62.87419976854324 L 31.37310610498701 147.49619938278198 C 31.37310610498701 149.99619938278198 28.87310610498701 152.49619938278198 26.37310610498701 152.49619938278198 L 16.124368701662334 152.49619938278198 C 13.624368701662334 152.49619938278198 11.124368701662336 149.99619938278198 11.124368701662336 147.49619938278198 Z " fill="rgba(14,130,253,0.85)" fill-opacity="1" stroke="#0e82fd" stroke-opacity="1" stroke-linecap="square" stroke-width="1" stroke-dasharray="0" class="apexcharts-bar-area " index="0" clip-path="url(#gridRectBarMaskkt5gaqdw)" pathTo="M 11.124368701662336 147.49619938278198 L 11.124368701662336 62.87419976854324 C 11.124368701662336 60.37419976854324 13.624368701662334 57.87419976854324 16.124368701662334 57.87419976854324 L 26.37310610498701 57.87419976854324 C 28.87310610498701 57.87419976854324 31.37310610498701 60.37419976854324 31.37310610498701 62.87419976854324 L 31.37310610498701 147.49619938278198 C 31.37310610498701 149.99619938278198 28.87310610498701 152.49619938278198 26.37310610498701 152.49619938278198 L 16.124368701662334 152.49619938278198 C 13.624368701662334 152.49619938278198 11.124368701662336 149.99619938278198 11.124368701662336 147.49619938278198 Z " pathFrom="M 11.124368701662336 152.49619938278198 L 11.124368701662336 152.49619938278198 L 31.37310610498701 152.49619938278198 L 31.37310610498701 152.49619938278198 L 31.37310610498701 152.49619938278198 L 31.37310610498701 152.49619938278198 L 31.37310610498701 152.49619938278198 L 11.124368701662336 152.49619938278198 Z" cy="57.373199768543245" cx="52.62184350831168" j="0" val="50" barHeight="95.62199961423873" barWidth="21.24873740332467"></path>
+                                                                     <path d="M 53.62184350831168 147.49619938278198 L 53.62184350831168 81.998599691391 C 53.62184350831168 79.498599691391 56.12184350831168 76.998599691391 58.62184350831168 76.998599691391 L 68.87058091163635 76.998599691391 C 71.37058091163635 76.998599691391 73.87058091163635 79.498599691391 73.87058091163635 81.998599691391 L 73.87058091163635 147.49619938278198 C 73.87058091163635 149.99619938278198 71.37058091163635 152.49619938278198 68.87058091163635 152.49619938278198 L 58.62184350831168 152.49619938278198 C 56.12184350831168 152.49619938278198 53.62184350831168 149.99619938278198 53.62184350831168 147.49619938278198 Z " fill="rgba(14,130,253,0.85)" fill-opacity="1" stroke="#0e82fd" stroke-opacity="1" stroke-linecap="square" stroke-width="1" stroke-dasharray="0" class="apexcharts-bar-area " index="0" clip-path="url(#gridRectBarMaskkt5gaqdw)" pathTo="M 53.62184350831168 147.49619938278198 L 53.62184350831168 81.998599691391 C 53.62184350831168 79.498599691391 56.12184350831168 76.998599691391 58.62184350831168 76.998599691391 L 68.87058091163635 76.998599691391 C 71.37058091163635 76.998599691391 73.87058091163635 79.498599691391 73.87058091163635 81.998599691391 L 73.87058091163635 147.49619938278198 C 73.87058091163635 149.99619938278198 71.37058091163635 152.49619938278198 68.87058091163635 152.49619938278198 L 58.62184350831168 152.49619938278198 C 56.12184350831168 152.49619938278198 53.62184350831168 149.99619938278198 53.62184350831168 147.49619938278198 Z " pathFrom="M 53.62184350831168 152.49619938278198 L 53.62184350831168 152.49619938278198 L 73.87058091163635 152.49619938278198 L 73.87058091163635 152.49619938278198 L 73.87058091163635 152.49619938278198 L 73.87058091163635 152.49619938278198 L 73.87058091163635 152.49619938278198 L 53.62184350831168 152.49619938278198 Z" cy="76.49759969139099" cx="95.11931831496102" j="1" val="40" barHeight="76.49759969139099" barWidth="21.24873740332467"></path>
+                                                                     <path d="M 96.11931831496102 147.49619938278198 L 96.11931831496102 129.80959949851035 C 96.11931831496102 127.30959949851035 98.61931831496102 124.80959949851037 101.11931831496102 124.80959949851037 L 111.36805571828569 124.80959949851037 C 113.86805571828569 124.80959949851037 116.36805571828569 127.30959949851035 116.36805571828569 129.80959949851035 L 116.36805571828569 147.49619938278198 C 116.36805571828569 149.99619938278198 113.86805571828569 152.49619938278198 111.36805571828569 152.49619938278198 L 101.11931831496102 152.49619938278198 C 98.61931831496102 152.49619938278198 96.11931831496102 149.99619938278198 96.11931831496102 147.49619938278198 Z " fill="rgba(14,130,253,0.85)" fill-opacity="1" stroke="#0e82fd" stroke-opacity="1" stroke-linecap="square" stroke-width="1" stroke-dasharray="0" class="apexcharts-bar-area " index="0" clip-path="url(#gridRectBarMaskkt5gaqdw)" pathTo="M 96.11931831496102 147.49619938278198 L 96.11931831496102 129.80959949851035 C 96.11931831496102 127.30959949851035 98.61931831496102 124.80959949851037 101.11931831496102 124.80959949851037 L 111.36805571828569 124.80959949851037 C 113.86805571828569 124.80959949851037 116.36805571828569 127.30959949851035 116.36805571828569 129.80959949851035 L 116.36805571828569 147.49619938278198 C 116.36805571828569 149.99619938278198 113.86805571828569 152.49619938278198 111.36805571828569 152.49619938278198 L 101.11931831496102 152.49619938278198 C 98.61931831496102 152.49619938278198 96.11931831496102 149.99619938278198 96.11931831496102 147.49619938278198 Z " pathFrom="M 96.11931831496102 152.49619938278198 L 96.11931831496102 152.49619938278198 L 116.36805571828569 152.49619938278198 L 116.36805571828569 152.49619938278198 L 116.36805571828569 152.49619938278198 L 116.36805571828569 152.49619938278198 L 116.36805571828569 152.49619938278198 L 96.11931831496102 152.49619938278198 Z" cy="124.30859949851036" cx="137.61679312161036" j="2" val="15" barHeight="28.68659988427162" barWidth="21.24873740332467"></path>
+                                                                     <path d="M 138.61679312161036 147.49619938278198 L 138.61679312161036 72.43639972996712 C 138.61679312161036 69.93639972996712 141.11679312161036 67.43639972996712 143.61679312161036 67.43639972996712 L 153.86553052493502 67.43639972996712 C 156.36553052493502 67.43639972996712 158.86553052493502 69.93639972996712 158.86553052493502 72.43639972996712 L 158.86553052493502 147.49619938278198 C 158.86553052493502 149.99619938278198 156.36553052493502 152.49619938278198 153.86553052493502 152.49619938278198 L 143.61679312161036 152.49619938278198 C 141.11679312161036 152.49619938278198 138.61679312161036 149.99619938278198 138.61679312161036 147.49619938278198 Z " fill="rgba(14,130,253,0.85)" fill-opacity="1" stroke="#0e82fd" stroke-opacity="1" stroke-linecap="square" stroke-width="1" stroke-dasharray="0" class="apexcharts-bar-area " index="0" clip-path="url(#gridRectBarMaskkt5gaqdw)" pathTo="M 138.61679312161036 147.49619938278198 L 138.61679312161036 72.43639972996712 C 138.61679312161036 69.93639972996712 141.11679312161036 67.43639972996712 143.61679312161036 67.43639972996712 L 153.86553052493502 67.43639972996712 C 156.36553052493502 67.43639972996712 158.86553052493502 69.93639972996712 158.86553052493502 72.43639972996712 L 158.86553052493502 147.49619938278198 C 158.86553052493502 149.99619938278198 156.36553052493502 152.49619938278198 153.86553052493502 152.49619938278198 L 143.61679312161036 152.49619938278198 C 141.11679312161036 152.49619938278198 138.61679312161036 149.99619938278198 138.61679312161036 147.49619938278198 Z " pathFrom="M 138.61679312161036 152.49619938278198 L 138.61679312161036 152.49619938278198 L 158.86553052493502 152.49619938278198 L 158.86553052493502 152.49619938278198 L 158.86553052493502 152.49619938278198 L 158.86553052493502 152.49619938278198 L 158.86553052493502 152.49619938278198 L 138.61679312161036 152.49619938278198 Z" cy="66.93539972996712" cx="180.1142679282597" j="3" val="45" barHeight="86.05979965281486" barWidth="21.24873740332467"></path>
+                                                                     <path d="M 181.1142679282597 147.49619938278198 L 181.1142679282597 91.56079965281486 C 181.1142679282597 89.06079965281486 183.6142679282597 86.56079965281486 186.1142679282597 86.56079965281486 L 196.36300533158436 86.56079965281486 C 198.86300533158436 86.56079965281486 201.36300533158436 89.06079965281486 201.36300533158436 91.56079965281486 L 201.36300533158436 147.49619938278198 C 201.36300533158436 149.99619938278198 198.86300533158436 152.49619938278198 196.36300533158436 152.49619938278198 L 186.1142679282597 152.49619938278198 C 183.6142679282597 152.49619938278198 181.1142679282597 149.99619938278198 181.1142679282597 147.49619938278198 Z " fill="rgba(14,130,253,0.85)" fill-opacity="1" stroke="#0e82fd" stroke-opacity="1" stroke-linecap="square" stroke-width="1" stroke-dasharray="0" class="apexcharts-bar-area " index="0" clip-path="url(#gridRectBarMaskkt5gaqdw)" pathTo="M 181.1142679282597 147.49619938278198 L 181.1142679282597 91.56079965281486 C 181.1142679282597 89.06079965281486 183.6142679282597 86.56079965281486 186.1142679282597 86.56079965281486 L 196.36300533158436 86.56079965281486 C 198.86300533158436 86.56079965281486 201.36300533158436 89.06079965281486 201.36300533158436 91.56079965281486 L 201.36300533158436 147.49619938278198 C 201.36300533158436 149.99619938278198 198.86300533158436 152.49619938278198 196.36300533158436 152.49619938278198 L 186.1142679282597 152.49619938278198 C 183.6142679282597 152.49619938278198 181.1142679282597 149.99619938278198 181.1142679282597 147.49619938278198 Z " pathFrom="M 181.1142679282597 152.49619938278198 L 181.1142679282597 152.49619938278198 L 201.36300533158436 152.49619938278198 L 201.36300533158436 152.49619938278198 L 201.36300533158436 152.49619938278198 L 201.36300533158436 152.49619938278198 L 201.36300533158436 152.49619938278198 L 181.1142679282597 152.49619938278198 Z" cy="86.05979965281486" cx="222.61174273490903" j="4" val="35" barHeight="66.93539972996712" barWidth="21.24873740332467"></path>
+                                                                     <path d="M 223.61174273490903 147.49619938278198 L 223.61174273490903 66.69907975311278 C 223.61174273490903 64.19907975311278 226.11174273490903 61.69907975311279 228.61174273490903 61.69907975311279 L 238.8604801382337 61.69907975311279 C 241.3604801382337 61.69907975311279 243.8604801382337 64.19907975311278 243.8604801382337 66.69907975311278 L 243.8604801382337 147.49619938278198 C 243.8604801382337 149.99619938278198 241.3604801382337 152.49619938278198 238.8604801382337 152.49619938278198 L 228.61174273490903 152.49619938278198 C 226.11174273490903 152.49619938278198 223.61174273490903 149.99619938278198 223.61174273490903 147.49619938278198 Z " fill="rgba(14,130,253,0.85)" fill-opacity="1" stroke="#0e82fd" stroke-opacity="1" stroke-linecap="square" stroke-width="1" stroke-dasharray="0" class="apexcharts-bar-area " index="0" clip-path="url(#gridRectBarMaskkt5gaqdw)" pathTo="M 223.61174273490903 147.49619938278198 L 223.61174273490903 66.69907975311278 C 223.61174273490903 64.19907975311278 226.11174273490903 61.69907975311279 228.61174273490903 61.69907975311279 L 238.8604801382337 61.69907975311279 C 241.3604801382337 61.69907975311279 243.8604801382337 64.19907975311278 243.8604801382337 66.69907975311278 L 243.8604801382337 147.49619938278198 C 243.8604801382337 149.99619938278198 241.3604801382337 152.49619938278198 238.8604801382337 152.49619938278198 L 228.61174273490903 152.49619938278198 C 226.11174273490903 152.49619938278198 223.61174273490903 149.99619938278198 223.61174273490903 147.49619938278198 Z " pathFrom="M 223.61174273490903 152.49619938278198 L 223.61174273490903 152.49619938278198 L 243.8604801382337 152.49619938278198 L 243.8604801382337 152.49619938278198 L 243.8604801382337 152.49619938278198 L 243.8604801382337 152.49619938278198 L 243.8604801382337 152.49619938278198 L 223.61174273490903 152.49619938278198 Z" cy="61.19807975311279" cx="265.1092175415584" j="5" val="48" barHeight="91.79711962966918" barWidth="21.24873740332467"></path>
+                                                                     <path d="M 266.1092175415584 147.49619938278198 L 266.1092175415584 34.187599884271634 C 266.1092175415584 31.687599884271634 268.6092175415584 29.18759988427163 271.1092175415584 29.18759988427163 L 281.3579549448831 29.18759988427163 C 283.8579549448831 29.18759988427163 286.3579549448831 31.687599884271634 286.3579549448831 34.187599884271634 L 286.3579549448831 147.49619938278198 C 286.3579549448831 149.99619938278198 283.8579549448831 152.49619938278198 281.3579549448831 152.49619938278198 L 271.1092175415584 152.49619938278198 C 268.6092175415584 152.49619938278198 266.1092175415584 149.99619938278198 266.1092175415584 147.49619938278198 Z " fill="rgba(14,130,253,0.85)" fill-opacity="1" stroke="#0e82fd" stroke-opacity="1" stroke-linecap="square" stroke-width="1" stroke-dasharray="0" class="apexcharts-bar-area " index="0" clip-path="url(#gridRectBarMaskkt5gaqdw)" pathTo="M 266.1092175415584 147.49619938278198 L 266.1092175415584 34.187599884271634 C 266.1092175415584 31.687599884271634 268.6092175415584 29.18759988427163 271.1092175415584 29.18759988427163 L 281.3579549448831 29.18759988427163 C 283.8579549448831 29.18759988427163 286.3579549448831 31.687599884271634 286.3579549448831 34.187599884271634 L 286.3579549448831 147.49619938278198 C 286.3579549448831 149.99619938278198 283.8579549448831 152.49619938278198 281.3579549448831 152.49619938278198 L 271.1092175415584 152.49619938278198 C 268.6092175415584 152.49619938278198 266.1092175415584 149.99619938278198 266.1092175415584 147.49619938278198 Z " pathFrom="M 266.1092175415584 152.49619938278198 L 266.1092175415584 152.49619938278198 L 286.3579549448831 152.49619938278198 L 286.3579549448831 152.49619938278198 L 286.3579549448831 152.49619938278198 L 286.3579549448831 152.49619938278198 L 286.3579549448831 152.49619938278198 L 266.1092175415584 152.49619938278198 Z" cy="28.68659988427163" cx="307.60669234820773" j="6" val="65" barHeight="124.30859949851035" barWidth="21.24873740332467"></path>
+                                                                     <g class="apexcharts-bar-goals-markers">
+                                                                        <g className="apexcharts-bar-goals-groups" class="apexcharts-hidden-element-shown" clip-path="url(#gridRectMarkerMaskkt5gaqdw)"></g>
+                                                                        <g className="apexcharts-bar-goals-groups" class="apexcharts-hidden-element-shown" clip-path="url(#gridRectMarkerMaskkt5gaqdw)"></g>
+                                                                        <g className="apexcharts-bar-goals-groups" class="apexcharts-hidden-element-shown" clip-path="url(#gridRectMarkerMaskkt5gaqdw)"></g>
+                                                                        <g className="apexcharts-bar-goals-groups" class="apexcharts-hidden-element-shown" clip-path="url(#gridRectMarkerMaskkt5gaqdw)"></g>
+                                                                        <g className="apexcharts-bar-goals-groups" class="apexcharts-hidden-element-shown" clip-path="url(#gridRectMarkerMaskkt5gaqdw)"></g>
+                                                                        <g className="apexcharts-bar-goals-groups" class="apexcharts-hidden-element-shown" clip-path="url(#gridRectMarkerMaskkt5gaqdw)"></g>
+                                                                        <g className="apexcharts-bar-goals-groups" class="apexcharts-hidden-element-shown" clip-path="url(#gridRectMarkerMaskkt5gaqdw)"></g>
+                                                                     </g>
+                                                                  </g>
+                                                                  <g class="apexcharts-datalabels" data:realIndex="0"></g>
+                                                               </g>
+                                                               <line x1="0" y1="0" x2="297.4823236465454" y2="0" stroke="#b6b6b6" stroke-dasharray="0" stroke-width="1" stroke-linecap="butt" class="apexcharts-ycrosshairs"></line>
+                                                               <line x1="0" y1="0" x2="297.4823236465454" y2="0" stroke="#b6b6b6" stroke-dasharray="0" stroke-width="0" stroke-linecap="butt" class="apexcharts-ycrosshairs-hidden"></line>
+                                                               <g class="apexcharts-xaxis" transform="translate(0, 0)">
+                                                                  <g class="apexcharts-xaxis-texts-g" transform="translate(0, -4)">
+                                                                     <text x="21.24873740332467" y="180.99519938278198" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-family="Helvetica, Arial, sans-serif" font-weight="400" fill="#373d3f" class="apexcharts-text apexcharts-xaxis-label " style="font-family: Helvetica, Arial, sans-serif;">
+                                                                        <tspan>M</tspan>
+                                                                        <title>M</title>
+                                                                     </text>
+                                                                     <text x="63.74621220997402" y="180.99519938278198" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-family="Helvetica, Arial, sans-serif" font-weight="400" fill="#373d3f" class="apexcharts-text apexcharts-xaxis-label " style="font-family: Helvetica, Arial, sans-serif;">
+                                                                        <tspan>T</tspan>
+                                                                        <title>T</title>
+                                                                     </text>
+                                                                     <text x="106.24368701662337" y="180.99519938278198" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-family="Helvetica, Arial, sans-serif" font-weight="400" fill="#373d3f" class="apexcharts-text apexcharts-xaxis-label " style="font-family: Helvetica, Arial, sans-serif;">
+                                                                        <tspan>W</tspan>
+                                                                        <title>W</title>
+                                                                     </text>
+                                                                     <text x="148.7411618232727" y="180.99519938278198" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-family="Helvetica, Arial, sans-serif" font-weight="400" fill="#373d3f" class="apexcharts-text apexcharts-xaxis-label " style="font-family: Helvetica, Arial, sans-serif;">
+                                                                        <tspan>T</tspan>
+                                                                        <title>T</title>
+                                                                     </text>
+                                                                     <text x="191.23863662992204" y="180.99519938278198" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-family="Helvetica, Arial, sans-serif" font-weight="400" fill="#373d3f" class="apexcharts-text apexcharts-xaxis-label " style="font-family: Helvetica, Arial, sans-serif;">
+                                                                        <tspan>F</tspan>
+                                                                        <title>F</title>
+                                                                     </text>
+                                                                     <text x="233.73611143657138" y="180.99519938278198" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-family="Helvetica, Arial, sans-serif" font-weight="400" fill="#373d3f" class="apexcharts-text apexcharts-xaxis-label " style="font-family: Helvetica, Arial, sans-serif;">
+                                                                        <tspan>S</tspan>
+                                                                        <title>S</title>
+                                                                     </text>
+                                                                     <text x="276.2335862432207" y="180.99519938278198" text-anchor="middle" dominant-baseline="auto" font-size="12px" font-family="Helvetica, Arial, sans-serif" font-weight="400" fill="#373d3f" class="apexcharts-text apexcharts-xaxis-label " style="font-family: Helvetica, Arial, sans-serif;">
+                                                                        <tspan>S</tspan>
+                                                                        <title>S</title>
+                                                                     </text>
+                                                                  </g>
+                                                               </g>
+                                                               <g class="apexcharts-yaxis-annotations"></g>
+                                                               <g class="apexcharts-xaxis-annotations"></g>
+                                                               <g class="apexcharts-point-annotations"></g>
+                                                            </g>
+                                                         </svg>
+                                                         <div class="apexcharts-legend" style="max-height: 110px;"></div>
+                                                         <div class="apexcharts-tooltip apexcharts-theme-light">
+                                                            <div class="apexcharts-tooltip-title" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px;"></div>
+                                                            <div class="apexcharts-tooltip-series-group apexcharts-tooltip-series-group-0" style="order: 1;">
+                                                               <span class="apexcharts-tooltip-marker" shape="circle" style="color: rgb(14, 130, 253);"></span>
+                                                               <div class="apexcharts-tooltip-text" style="font-family: Helvetica, Arial, sans-serif; font-size: 12px;">
+                                                                  <div class="apexcharts-tooltip-y-group"><span class="apexcharts-tooltip-text-y-label"></span><span class="apexcharts-tooltip-text-y-value"></span></div>
+                                                                  <div class="apexcharts-tooltip-goals-group"><span class="apexcharts-tooltip-text-goals-label"></span><span class="apexcharts-tooltip-text-goals-value"></span></div>
+                                                                  <div class="apexcharts-tooltip-z-group"><span class="apexcharts-tooltip-text-z-label"></span><span class="apexcharts-tooltip-text-z-value"></span></div>
+                                                               </div>
+                                                            </div>
+                                                         </div>
+                                                         <div class="apexcharts-yaxistooltip apexcharts-yaxistooltip-0 apexcharts-yaxistooltip-left apexcharts-theme-light">
+                                                            <div class="apexcharts-yaxistooltip-text"></div>
+                                                         </div>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="pills-appointment" role="tabpanel" aria-labelledby="pills-appointment-tab">
+                                                   <div style="min-height: 235px;">
+                                                      <div id="apexcharts2t2ki2cr" class="apexcharts-canvas apexcharts2t2ki2cr" style="width: 0px; height: 220px;">
+                                                         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" class="apexcharts-svg" xmlns:data="ApexChartsNS" transform="translate(0, 0)" width="0" height="220">
+                                                            <foreignObject x="0" y="0" width="0" height="220"></foreignObject>
+                                                            <g class="apexcharts-inner apexcharts-graphical">
+                                                               <defs></defs>
+                                                            </g>
+                                                         </svg>
+                                                         <div class="apexcharts-legend"></div>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="dashboard-card w-100">
+                                       <div class="dashboard-card-head">
+                                          <div class="header-title">
+                                             <h5>Recent Patients</h5>
+                                          </div>
+                                          <div class="card-view-link"><a href="#" data-discover="true">View All</a></div>
+                                       </div>
+                                       <div class="dashboard-card-body">
+                                          <div class="d-flex recent-patient-grid-boxes">
+                                             <div class="recent-patient-grid">
+                                                <a class="patient-img" href="#" data-discover="true"><img alt="Img" src="img/dashboard/profile-01-DT2Z6e8O.jpg"></a>
+                                                <h5><a href="#" data-discover="true">Adrian Marshall</a></h5>
+                                                <span>Patient ID :&nbsp;P0001</span>
+                                                <div class="date-info">
+                                                   <p>Last Appointment 15 Mar 2025</p>
+                                                </div>
+                                             </div>
+                                             <div class="recent-patient-grid">
+                                                <a class="patient-img" href="#" data-discover="true"><img alt="Img" src="img/dashboard/profile-02-CfwraHe7.jpg"></a>
+                                                <h5><a href="#" data-discover="true">Kelly Stevens</a></h5>
+                                                <span>Patient ID :&nbsp;P0002</span>
+                                                <div class="date-info">
+                                                   <p>Last Appointment 13 Mar 2025</p>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-xl-7 d-flex">
+                                 <div class="dashboard-main-col w-100">
+                                    <div class="upcoming-appointment-card">
+                                       <div class="title-card">
+                                          <h5>Upcoming Appointment</h5>
+                                       </div>
+                                       <div class="upcoming-patient-info">
+                                          <div class="info-details">
+                                             <span class="img-avatar"><img alt="Img" src="img/dashboard/profile-01-DT2Z6e8O.jpg"></span>
+                                             <div class="name-info">
+                                                <span>#Apt0001</span>
+                                                <h6>Adrian Marshall</h6>
+                                             </div>
+                                          </div>
+                                          <div class="date-details">
+                                             <span>General visit</span>
+                                             <h6>Today, 10:45 AM</h6>
+                                          </div>
+                                       </div>
+                                       <div class="appointment-card-footer">
+                                          <h5><i class="fa-solid fa-video"></i>Video Appointment</h5>
+                                          <div class="btn-appointments"><a class="btn" href="#" data-discover="true">Chat Now</a><a class="btn" href="#" data-discover="true">Start Appointment</a></div>
+                                       </div>
+                                    </div>
+                                    <div class="dashboard-card w-100">
+                                       <div class="dashboard-card-head">
+                                          <div class="header-title">
+                                             <h5>Recent Invoices</h5>
+                                          </div>
+                                          <div class="card-view-link"><a href="#" data-discover="true">View All</a></div>
+                                       </div>
+                                       <div class="dashboard-card-body">
+                                          <div class="table-responsive">
+                                             <table class="table dashboard-table">
+                                                <tbody>
+                                                   <tr>
+                                                      <td>
+                                                         <div class="patient-info-profile">
+                                                            <a class="table-avatar" href="#" data-discover="true"><img alt="Img" src="img/dashboard/profile-01-DT2Z6e8O.jpg"></a>
+                                                            <div class="patient-name-info">
+                                                               <h5><a href="/react/template/doctor/invoices" data-discover="true">Adrian</a></h5>
+                                                               <span>#Apt0001</span>
+                                                            </div>
+                                                         </div>
+                                                      </td>
+                                                      <td>
+                                                         <div class="appointment-date-created">
+                                                            <span class="paid-text">Amount</span>
+                                                            <h6>$450</h6>
+                                                         </div>
+                                                      </td>
+                                                      <td>
+                                                         <div class="appointment-date-created">
+                                                            <span class="paid-text">Paid On</span>
+                                                            <h6>11 Nov 2025</h6>
+                                                         </div>
+                                                      </td>
+                                                      <td>
+                                                         <div class="apponiment-view d-flex align-items-center"><a href="/react/template/pages/invoice-view" data-discover="true"><i class="fa-solid fa-eye"></i></a></div>
+                                                      </td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>
+                                                         <div class="patient-info-profile">
+                                                            <a class="table-avatar" href="dashboard.html" data-discover="true"><img alt="Img" src="img/dashboard/profile-02-CfwraHe7.jpg"></a>
+                                                            <div class="patient-name-info">
+                                                               <h5><a href="dashboard.html" data-discover="true">Kelly</a></h5>
+                                                               <span>#Apt0002</span>
+                                                            </div>
+                                                         </div>
+                                                      </td>
+                                                      <td>
+                                                         <div class="appointment-date-created">
+                                                            <span class="paid-text">Paid On</span>
+                                                            <h6>10 Nov 2025</h6>
+                                                         </div>
+                                                      </td>
+                                                      <td>
+                                                         <div class="appointment-date-created">
+                                                            <span class="paid-text">Amount</span>
+                                                            <h6>$500</h6>
+                                                         </div>
+                                                      </td>
+                                                      <td>
+                                                         <div class="apponiment-view d-flex align-items-center"><a href="dashboard.html" data-discover="true"><i class="fa-solid fa-eye"></i></a></div>
+                                                      </td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>
+                                                         <div class="patient-info-profile">
+                                                            <a class="table-avatar" href="dashboard.html" data-discover="true"><img alt="Img" src="img/dashboard/profile-03-ComJhJvI.jpg"></a>
+                                                            <div class="patient-name-info">
+                                                               <h5><a href="dashboard.html" data-discover="true">Samuel</a></h5>
+                                                               <span>#Apt0003</span>
+                                                            </div>
+                                                         </div>
+                                                      </td>
+                                                      <td>
+                                                         <div class="appointment-date-created">
+                                                            <span class="paid-text">Paid On</span>
+                                                            <h6>03 Nov 2025</h6>
+                                                         </div>
+                                                      </td>
+                                                      <td>
+                                                         <div class="appointment-date-created">
+                                                            <span class="paid-text">Amount</span>
+                                                            <h6>$320</h6>
+                                                         </div>
+                                                      </td>
+                                                      <td>
+                                                         <div class="apponiment-view d-flex align-items-center"><a href="dashboard.html" data-discover="true"><i class="fa-solid fa-eye"></i></a></div>
+                                                      </td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>
+                                                         <div class="patient-info-profile">
+                                                            <a class="table-avatar" href="dashboard.html" data-discover="true"><img alt="Img" src="img/dashboard/profile-04-CEtoD4p6.jpg"></a>
+                                                            <div class="patient-name-info">
+                                                               <h5><a href="dashboard.html" data-discover="true">Catherine</a></h5>
+                                                               <span>#Apt0004</span>
+                                                            </div>
+                                                         </div>
+                                                      </td>
+                                                      <td>
+                                                         <div class="appointment-date-created">
+                                                            <span class="paid-text">Paid On</span>
+                                                            <h6>01 Nov 2025</h6>
+                                                         </div>
+                                                      </td>
+                                                      <td>
+                                                         <div class="appointment-date-created">
+                                                            <span class="paid-text">Amount</span>
+                                                            <h6>$240</h6>
+                                                         </div>
+                                                      </td>
+                                                      <td>
+                                                         <div class="apponiment-view d-flex align-items-center"><a href="dashboard.html" data-discover="true"><i class="fa-solid fa-eye"></i></a></div>
+                                                      </td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>
+                                                         <div class="patient-info-profile">
+                                                            <a class="table-avatar" href="dashboard.html" data-discover="true"><img alt="Img" src="img/dashboard/profile-05-C4xc7dns.jpg"></a>
+                                                            <div class="patient-name-info">
+                                                               <h5><a href="dashboard.html" data-discover="true">Robert</a></h5>
+                                                               <span>#Apt0005</span>
+                                                            </div>
+                                                         </div>
+                                                      </td>
+                                                      <td>
+                                                         <div class="appointment-date-created">
+                                                            <span class="paid-text">Paid On</span>
+                                                            <h6>28 Oct 2025</h6>
+                                                         </div>
+                                                      </td>
+                                                      <td>
+                                                         <div class="appointment-date-created">
+                                                            <span class="paid-text">Amount</span>
+                                                            <h6>$380</h6>
+                                                         </div>
+                                                      </td>
+                                                      <td>
+                                                         <div class="apponiment-view d-flex align-items-center"><a href="dashboard.html" data-discover="true"><i class="fa-solid fa-eye"></i></a></div>
+                                                      </td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-xl-7 d-flex">
+                                 <div class="dashboard-card w-100">
+                                    <div class="dashboard-card-head">
+                                       <div class="header-title">
+                                          <h5>Notifications</h5>
+                                       </div>
+                                       <div class="card-view-link"><a href="dashboard.html" data-discover="true">View All</a></div>
+                                    </div>
+                                    <div class="dashboard-card-body">
+                                       <div class="table-responsive">
+                                          <table class="table dashboard-table">
+                                             <tbody>
+                                                <tr>
+                                                   <td>
+                                                      <div class="table-noti-info">
+                                                         <div class="table-noti-icon color-violet"><i class="fa-solid fa-bell"></i></div>
+                                                         <div class="table-noti-message">
+                                                            <h6><a href="dashboard.html" data-discover="true">Booking Confirmed on <span> 21 Mar 2025 </span> 10:30 AM</a></h6>
+                                                            <span class="message-time">Just Now</span>
+                                                         </div>
+                                                      </div>
+                                                   </td>
+                                                </tr>
+                                                <tr>
+                                                   <td>
+                                                      <div class="table-noti-info">
+                                                         <div class="table-noti-icon color-blue"><i class="fa-solid fa-star"></i></div>
+                                                         <div class="table-noti-message">
+                                                            <h6><a href="dashboard.html" data-discover="true">You have a <span> New </span> Review for your Appointment </a></h6>
+                                                            <span class="message-time">5 Days ago</span>
+                                                         </div>
+                                                      </div>
+                                                   </td>
+                                                </tr>
+                                                <tr>
+                                                   <td>
+                                                      <div class="table-noti-info">
+                                                         <div class="table-noti-icon color-red"><i class="fa-solid fa-calendar-check"></i></div>
+                                                         <div class="table-noti-message">
+                                                            <h6><a href="dashboard.html" data-discover="true">You have Appointment with <span> Ahmed </span> by 01:20 PM </a></h6>
+                                                            <span class="message-time">12:55 PM</span>
+                                                         </div>
+                                                      </div>
+                                                   </td>
+                                                </tr>
+                                                <tr>
+                                                   <td>
+                                                      <div class="table-noti-info">
+                                                         <div class="table-noti-icon color-yellow"><i class="fa-solid fa-money-bill-1-wave"></i></div>
+                                                         <div class="table-noti-message">
+                                                            <h6><a href="dashboard.html" data-discover="true">Sent an amount of <span> $200 </span> for an Appointment by 01:20 PM </a></h6>
+                                                            <span class="message-time">2 Days ago</span>
+                                                         </div>
+                                                      </div>
+                                                   </td>
+                                                </tr>
+                                                <tr>
+                                                   <td>
+                                                      <div class="table-noti-info">
+                                                         <div class="table-noti-icon color-blue"><i class="fa-solid fa-star"></i></div>
+                                                         <div class="table-noti-message">
+                                                            <h6><a href="dashboard.html" data-discover="true">You have a <span> New </span> Review for your Appointment </a></h6>
+                                                            <span class="message-time">5 Days ago</span>
+                                                         </div>
+                                                      </div>
+                                                   </td>
+                                                </tr>
+                                             </tbody>
+                                          </table>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-xl-5 d-flex">
+                                 <div class="dashboard-card w-100">
+                                    <div class="dashboard-card-head">
+                                       <div class="header-title">
+                                          <h5>Clinics &amp; Availability</h5>
+                                       </div>
+                                    </div>
+                                    <div class="dashboard-card-body">
+                                       <div class="clinic-available">
+                                          <div class="clinic-head">
+                                             <div class="clinic-info">
+                                                <span class="clinic-img"><img alt="Img" src="img/dashboard/clinic-02-Dk-Adecs.jpg"></span>
+                                                <h6>Sofi's Clinic</h6>
+                                             </div>
+                                             <div class="clinic-charge"><span>$900</span></div>
+                                          </div>
+                                          <div class="available-time">
+                                             <ul>
+                                                <li><span>Tue :</span>07:00 AM - 09:00 PM</li>
+                                                <li><span>Wed : </span>07:00 AM - 09:00 PM</li>
+                                             </ul>
+                                             <div class="change-time"><a href="dashboard.html" data-discover="true">Change </a></div>
+                                          </div>
+                                       </div>
+                                       <div class="clinic-available mb-0">
+                                          <div class="clinic-head">
+                                             <div class="clinic-info">
+                                                <span class="clinic-img"><img alt="Img" src="img/dashboard/clinic-01-DaCJn46U.jpg"></span>
+                                                <h6>The Family Dentistry Clinic</h6>
+                                             </div>
+                                             <div class="clinic-charge"><span>$600</span></div>
+                                          </div>
+                                          <div class="available-time">
+                                             <ul>
+                                                <li><span>Sat :</span>07:00 AM - 09:00 PM</li>
+                                                <li><span>Tue : </span>07:00 AM - 09:00 PM</li>
+                                             </ul>
+                                             <div class="change-time"><a href="dashboard.html" data-discover="true">Change </a></div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <footer class="footer inner-footer footer-info">
+                  <div class="footer-top">
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-lg-8">
+                              <div class="row">
+                                 <div class="col-lg-3 col-md-3">
+                                    <div class="footer-widget footer-menu">
+                                       <h6 class="footer-title">Company</h6>
+                                       <ul>
+                                          <li><a href="/react/template/pages/about-us" data-discover="true">About</a></li>
+                                          <li><a href="/react/template/patient/search-doctor1" data-discover="true">Features</a></li>
+                                          <li><a href="dashboard.html" data-discover="true">Works</a></li>
+                                          <li><a href="dashboard.html" data-discover="true">Careers</a></li>
+                                          <li><a href="dashboard.html" data-discover="true">Locations</a></li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-3 col-md-3">
+                                    <div class="footer-widget footer-menu">
+                                       <h6 class="footer-title">Treatments</h6>
+                                       <ul>
+                                          <li><a href="/react/template/patient/search-doctor1" data-discover="true">Dental</a></li>
+                                          <li><a href="/react/template/patient/search-doctor1" data-discover="true">Cardiac</a></li>
+                                          <li><a href="/react/template/patient/search-doctor1" data-discover="true">Spinal Cord</a></li>
+                                          <li><a href="/react/template/patient/search-doctor1" data-discover="true">Hair Growth</a></li>
+                                          <li><a href="/react/template/patient/search-doctor1" data-discover="true">Anemia &amp; Disorder</a></li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-3 col-md-3">
+                                    <div class="footer-widget footer-menu">
+                                       <h6 class="footer-title">Specialities</h6>
+                                       <ul>
+                                          <li><a href="/react/template/patient/search-doctor1" data-discover="true">Transplant</a></li>
+                                          <li><a href="/react/template/patient/search-doctor1" data-discover="true">Cardiologist</a></li>
+                                          <li><a href="/react/template/patient/search-doctor1" data-discover="true">Oncology</a></li>
+                                          <li><a href="/react/template/patient/search-doctor1" data-discover="true">Pediatrics</a></li>
+                                          <li><a href="/react/template/patient/search-doctor1" data-discover="true">Gynacology</a></li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-3 col-md-3">
+                                    <div class="footer-widget footer-menu">
+                                       <h6 class="footer-title">Utilites</h6>
+                                       <ul>
+                                          <li><a href="#" data-discover="true">Pricing</a></li>
+                                          <li><a href="#" data-discover="true">Contact</a></li>
+                                          <li><a href="#" data-discover="true">Request A Quote</a></li>
+                                          <li><a href="dashboard.html" data-discover="true">Premium Membership</a></li>
+                                          <li><a href="dashboard.html" data-discover="true">Integrations</a></li>
+                                       </ul>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-lg-4 col-md-7">
+                              <div class="footer-widget">
+                                 <h6 class="footer-title">Newsletter</h6>
+                                 <p class="mb-2">Subscribe &amp; Stay Updated from the Doccure</p>
+                                 <div class="subscribe-input">
+                                    <form action="#"><input class="form-control" placeholder="Enter Email Address" type="email"><button type="submit" class="btn btn-md btn-primary-gradient d-inline-flex align-items-center"><i class="isax isax-send-25 me-1"></i>Send</button></form>
+                                 </div>
+                                 <div class="social-icon">
+                                    <h6 class="mb-3">Connect With Us</h6>
+                                    <ul>
+                                       <li><a href="dashboard.html" data-discover="true"><i class="fa-brands fa-facebook"></i></a></li>
+                                       <li><a href="dashboard.html" data-discover="true"><i class="fa-brands fa-x-twitter"></i></a></li>
+                                       <li><a href="dashboard.html" data-discover="true"><i class="fa-brands fa-instagram"></i></a></li>
+                                       <li><a href="dashboard.html" data-discover="true"><i class="fa-brands fa-linkedin"></i></a></li>
+                                       <li><a href="dashboard.html" data-discover="true"><i class="fa-brands fa-pinterest"></i></a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="footer-bg"><img class="footer-bg-01" alt="img" src="img/footer-bg-01.png"><img class="footer-bg-02" alt="img" src="img/footer-bg-02.png"><img class="footer-bg-03" alt="img" src="img/footer-bg-03.png"><img class="footer-bg-04" alt="img" src="img/footer-bg-04.png"><img class="footer-bg-05" alt="img" src="img/footer-bg-05.png"></div>
+                  </div>
+                  <div class="footer-bottom">
+                     <div class="container">
+                        <div class="copyright">
+                           <div class="copyright-text">
+                              <p class="mb-0">Copyright © 2025 Doccure. All Rights Reserved</p>
+                           </div>
+                           <div class="copyright-menu">
+                              <ul class="policy-menu">
+                                 <li><a href="dashboard.html" data-discover="true">Legal Notice</a></li>
+                                 <li><a href="#" data-discover="true">Privacy Policy</a></li>
+                                 <li><a href="dashboard.html" data-discover="true">Refund Policy</a></li>
+                              </ul>
+                           </div>
+                           <ul class="payment-method">
+                              <li><a href="dashboard.html" data-discover="true"><img alt="Img" src="img/card-01.svg"></a></li>
+                              <li><a href="dashboard.html" data-discover="true"><img alt="Img" src="img/card-02.svg"></a></li>
+                              <li><a href="dashboard.html" data-discover="true"><img alt="Img" src="img/card-03.svg"></a></li>
+                              <li><a href="dashboard.html" data-discover="true"><img alt="Img" src="img/card-04.svg"></a></li>
+                              <li><a href="dashboard.html" data-discover="true"><img alt="Img" src="img/card-05.svg"></a></li>
+                              <li><a href="dashboard.html" data-discover="true"><img alt="Img" src="img/card-06.svg"></a></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </footer>
+            </div>
+         </div>
+         <div class="sidebar-overlay"></div>
+      </div>
+   </div>
+   <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;3ca157e612a14eccbb30cf6db6691c29&quot;,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+</body>
+
+<!-- banner -->
+
+
+<!-- Footer --> 
+
+
+
+
+
+<script src="Js/script-dashboard.js"></script>
+</body>
+</html>

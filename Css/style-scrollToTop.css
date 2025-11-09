@@ -1,0 +1,39 @@
+#scrollToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.3s ease;
+  z-index: 999;
+}
+#scrollToTop i {
+  position: absolute;
+  font-size: 18px;
+  color: var(--bs-primary);
+  transition: transform 0.3s ease;
+}
+#scrollToTop:hover i {
+  transform: translateY(-4px);
+}
+.progress-ring {
+  transform: rotate(-90deg);
+}
+.progress-ring__circle {
+  transition: stroke-dashoffset 0.2s linear;
+  stroke-linecap: round;
+}
+#scrollToTop.show {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+}
