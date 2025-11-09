@@ -1,0 +1,90 @@
+:root{
+    --title-color: #1E335C;
+    --p-color: #6C7994;
+    --white: #ffffff;
+    --light-grey: #D9D9D9;
+    --card-color:  #171717ff;
+    --blue: #19ABFE;
+    --green: #6BBE51;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--white);
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+
+
+.d-flex {
+    display: flex;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.padding-top-bottom {
+    padding: 4% 0;
+}
+
+.wrapper{
+    perspective: 3000px;
+}
+
+.card{
+    width: 547px;
+    height: 885px;
+    transform-style: preserve-3d;
+    transition: transform .5s ease-in-out;
+    cursor: pointer;
+    border: 0px solid var(--white);
+    border-radius: 30px;
+}
+
+.card:hover{
+    transform: rotateY(180deg);
+}
+
+.front-page , .back-page{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 30px;
+
+}
+
+.front-page{
+    background-image: url(reinaldo-Pzn0C7bhpBI-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    color: var(--white)
+    padding: 30px;
+
+}
+
+
+.back-page{
+    background-color: #fff;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+
+}
+
